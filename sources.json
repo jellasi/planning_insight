@@ -1,0 +1,84 @@
+{
+  "report": {
+    "target_audience": "서비스 기획자, Product Manager, Product Owner",
+    "focus_areas": [
+      "서비스 및 제품 전략",
+      "고객 문제 정의와 사용자 리서치",
+      "신규 기능 및 정책 설계",
+      "제품 발견과 가설 검증",
+      "로드맵 및 우선순위 관리",
+      "제품 지표와 데이터 분석",
+      "실험, A/B 테스트 및 성장 전략",
+      "UX 및 고객 경험",
+      "운영 프로세스와 어드민 설계",
+      "PM·PO 협업 및 조직 운영",
+      "AI 기반 제품 및 업무 자동화",
+      "국내외 제품 사례"
+    ]
+  },
+  "sources": [
+    {
+      "id": "svpg",
+      "name": "SVPG",
+      "url": "https://www.svpg.com/feed/",
+      "type": "rss",
+      "language": "en",
+      "weight": 1.15,
+      "notes": "Product strategy, product discovery, leadership"
+    },
+    {
+      "id": "intercom_blog",
+      "name": "Intercom Blog",
+      "url": "https://www.intercom.com/blog/feed",
+      "type": "rss",
+      "language": "en",
+      "weight": 1.05,
+      "notes": "AI product, customer support, growth, CX"
+    },
+    {
+      "id": "lenny_newsletter",
+      "name": "Lenny's Newsletter",
+      "url": "https://www.lennysnewsletter.com/feed",
+      "type": "rss",
+      "language": "en",
+      "weight": 1.1,
+      "notes": "PM, growth, product leadership"
+    },
+    {
+      "id": "product_talk",
+      "name": "Product Talk",
+      "url": "https://www.producttalk.org/feed/",
+      "type": "rss",
+      "language": "en",
+      "weight": 1.1,
+      "notes": "Continuous discovery, customer interviews, product habits"
+    },
+    {
+      "id": "roman_pichler",
+      "name": "Roman Pichler",
+      "url": "https://www.romanpichler.com/feed/",
+      "type": "rss",
+      "language": "en",
+      "weight": 0.95,
+      "notes": "Product strategy, agile product management"
+    },
+    {
+      "id": "product_coalition",
+      "name": "Product Coalition",
+      "url": "https://productcoalition.com/feed",
+      "type": "rss",
+      "language": "en",
+      "weight": 0.85,
+      "notes": "Practitioner product management essays"
+    },
+    {
+      "id": "atlassian_work_life",
+      "name": "Atlassian Work Life",
+      "url": "https://www.atlassian.com/blog/feed",
+      "type": "rss",
+      "language": "en",
+      "weight": 0.8,
+      "notes": "Team collaboration, rituals, operating model"
+    }
+  ]
+}

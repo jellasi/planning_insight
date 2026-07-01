@@ -1,0 +1,98 @@
+name: Weekly planning insight report
+
+on:
+  # 매주 월요일 08:00 KST = 일요일 23:00 UTC
+  schedule:
+    - cron: "0 23 * * 0"
+  workflow_dispatch:
+    inputs:
+      period_from:
+        description: "리포트 시작일 YYYY-MM-DD. 비우면 KST 기준 지난 7일"
+        required: false
+        default: ""
+      period_to:
+        description: "리포트 종료일 YYYY-MM-DD. 종료일 포함"
+        required: false
+        default: ""
+      notify:
+        description: "Slack/Email 발송 여부"
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate report
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_USE_SSL: ${{ secrets.SMTP_USE_SSL }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO || 'minseok.cho@unitblack.co.kr,jellasi@naver.com' }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+        run: |
+          PERIOD_FROM="${{ github.event.inputs.period_from }}"
+          PERIOD_TO="${{ github.event.inputs.period_to }}"
+          SHOULD_NOTIFY="${{ github.event.inputs.notify }}"
+
+          if [ -z "$PERIOD_FROM" ] || [ -z "$PERIOD_TO" ]; then
+            PERIOD_TO=$(TZ=Asia/Seoul date -d "yesterday" +%F)
+            PERIOD_FROM=$(TZ=Asia/Seoul date -d "$PERIOD_TO -6 days" +%F)
+          fi
+          if [ -z "$SHOULD_NOTIFY" ]; then
+            SHOULD_NOTIFY="true"
+          fi
+
+          NOTIFY_FLAG=""
+          if [ "$SHOULD_NOTIFY" = "true" ]; then
+            NOTIFY_FLAG="--notify"
+          fi
+
+          python -m py_compile monitor.py
+          python monitor.py --period-from "$PERIOD_FROM" --period-to "$PERIOD_TO" $NOTIFY_FLAG
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: planning-insight-report
+          path: |
+            last_report.json
+            last_report.md
+            last_slack_message.md
+
+      - name: Commit generated reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add last_report.json last_report.md last_slack_message.md
+          if git diff --cached --quiet; then
+            echo "No report changes to commit"
+          else
+            git commit -m "chore: update planning insight report"
+            git push
+          fi
