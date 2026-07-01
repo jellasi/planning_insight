@@ -6,12 +6,12 @@
 - 주요 독자: 서비스 기획자, Product Manager, Product Owner
 - 관심 주제: 서비스 및 제품 전략, 고객 문제 정의와 사용자 리서치, 신규 기능 및 정책 설계, 제품 발견과 가설 검증, 로드맵 및 우선순위 관리, 제품 지표와 데이터 분석, 실험, A/B 테스트 및 성장 전략, UX 및 고객 경험, 운영 프로세스와 어드민 설계, PM·PO 협업 및 조직 운영, AI 기반 제품 및 업무 자동화, 국내외 제품 사례
 - 이전 리포트: 있음
-- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions
+- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/28496542551
 
 ## 1. Executive Summary
 - AI 기반 제품·자동화: EP105 What happens when your users become the builders?; Is This Okay? How Override Labs Built a Safety-First AI Consent Coach for Teen Boys; The new product introduction process: How to make sure your Agent is ready every time you ship 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
-- 조직 운영·협업: The Hidden Tax on Every Product Decision 등을 통해 신규 관찰로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
-- 제품 지표·실험·성장: 🧠 Community Wisdom: Beating a career slump, adding more structure to an established team, questions for new-team 1:1s, the evolving shape of the growth role, and more 등을 통해 신규 관찰로 확인되었습니다. 기능 출시 후 성공 여부를 판단할 지표와 실험 설계를 사전에 정의하는 실무 기준으로 활용할 수 있습니다.
+- 조직 운영·협업: The Hidden Tax on Every Product Decision 등을 통해 지속 이슈로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
+- 제품 지표·실험·성장: 🧠 Community Wisdom: Beating a career slump, adding more structure to an established team, questions for new-team 1:1s, the evolving shape of the growth role, and more 등을 통해 지속 이슈로 확인되었습니다. 기능 출시 후 성공 여부를 판단할 지표와 실험 설계를 사전에 정의하는 실무 기준으로 활용할 수 있습니다.
 
 ## 2. 주요 인사이트
 ### [AI 기반 제품·자동화]
@@ -28,7 +28,7 @@
 ### [조직 운영·협업]
 - 중요도: HIGH
 - 핵심 내용: The Hidden Tax on Every Product Decision — Every Product Team Knows the Cost of Building. Almost None Know the Cost of Getting It Wrong.
-- 등장 배경: Product Coalition에 2026-06-25 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: The Hidden Tax on Every Product Decision. 이전 리포트 대비 구분: 신규.
+- 등장 배경: Product Coalition에 2026-06-25 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: The Hidden Tax on Every Product Decision. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
@@ -39,7 +39,7 @@
 ### [제품 지표·실험·성장]
 - 중요도: HIGH
 - 핵심 내용: 🧠 Community Wisdom: Beating a career slump, adding more structure to an established team, questions for new-team 1:1s, the evolving shape of the growth role, and more — Community Wisdom 191
-- 등장 배경: Lenny's Newsletter에 2026-06-27 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 🧠 Community Wisdom: Beating a career slump, adding more structure to an established team, questions for new-team 1:1s, the evolving shape of the growth role, and more. 이전 리포트 대비 구분: 신규.
+- 등장 배경: Lenny's Newsletter에 2026-06-27 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 🧠 Community Wisdom: Beating a career slump, adding more structure to an established team, questions for new-team 1:1s, the evolving shape of the growth role, and more. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: 기능 출시 후 성공 여부를 판단할 지표와 실험 설계를 사전에 정의하는 실무 기준으로 활용할 수 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
@@ -50,7 +50,7 @@
 ### [UX·고객 경험]
 - 중요도: LOW
 - 핵심 내용: Creating Experiences - All Things Product Podcast with Teresa Torres & Petra Wille — Listen to this episode on: Spotify | Apple Podcasts What makes an event truly unforgettable — and what can product teams learn from it? In this episode, Teresa sits down with Petra Wille to explore how Petra and her co-organizer Arne design experiences (not just events) at Product at Heart
-- 등장 배경: Product Talk에 2026-06-23 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Creating Experiences - All Things Product Podcast with Teresa Torres & Petra Wille. 이전 리포트 대비 구분: 신규.
+- 등장 배경: Product Talk에 2026-06-23 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Creating Experiences - All Things Product Podcast with Teresa Torres & Petra Wille. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: 화면 단위 개선보다 전체 고객 여정과 예외 케이스까지 포함한 경험 설계 관점이 필요합니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 광고성·일반론 가능성이 있으므로 바로 적용하기보다 내부 맥락과 맞는지 확인이 필요합니다.
