@@ -12,4 +12,4 @@
 - 신규 기획안에 고객 문제·가설·성공 지표를 1페이지로 먼저 정리
 - 백로그 인수 조건에 정상/예외/운영 케이스와 측정 이벤트 포함
 
-🔗 [전체 리포트 보기](https://github.com/jellasi/planning_insight/actions/runs/28496542551)
+🔗 [전체 리포트 보기](https://github.com/jellasi/planning_insight/actions/runs/28503940336)

@@ -6,7 +6,7 @@
 - 주요 독자: 서비스 기획자, Product Manager, Product Owner
 - 관심 주제: 서비스 및 제품 전략, 고객 문제 정의와 사용자 리서치, 신규 기능 및 정책 설계, 제품 발견과 가설 검증, 로드맵 및 우선순위 관리, 제품 지표와 데이터 분석, 실험, A/B 테스트 및 성장 전략, UX 및 고객 경험, 운영 프로세스와 어드민 설계, PM·PO 협업 및 조직 운영, AI 기반 제품 및 업무 자동화, 국내외 제품 사례
 - 이전 리포트: 있음
-- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/28496542551
+- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/28503940336
 
 ## 1. Executive Summary
 - AI 기반 제품·자동화: EP105 What happens when your users become the builders?; Is This Okay? How Override Labs Built a Safety-First AI Consent Coach for Teen Boys; The new product introduction process: How to make sure your Agent is ready every time you ship 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
