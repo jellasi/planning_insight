@@ -1,62 +1,39 @@
-# 2026-06-23 ~ 2026-06-28 서비스 기획·PM·PO 인사이트 리포트
+# 2026-06-29 ~ 2026-07-05 서비스 기획·PM·PO 인사이트 리포트
 
 ## 리포트 정보
-- 리포트 기간: 2026-06-23 ~ 2026-06-28
-- 작성 기준일: 2026-07-01
+- 리포트 기간: 2026-06-29 ~ 2026-07-05
+- 작성 기준일: 2026-07-06
 - 주요 독자: 서비스 기획자, Product Manager, Product Owner
 - 관심 주제: 서비스 및 제품 전략, 고객 문제 정의와 사용자 리서치, 신규 기능 및 정책 설계, 제품 발견과 가설 검증, 로드맵 및 우선순위 관리, 제품 지표와 데이터 분석, 실험, A/B 테스트 및 성장 전략, UX 및 고객 경험, 운영 프로세스와 어드민 설계, PM·PO 협업 및 조직 운영, AI 기반 제품 및 업무 자동화, 국내외 제품 사례
 - 이전 리포트: 있음
-- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/28503940336
+- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/28759509150
 
 ## 1. Executive Summary
-- AI 기반 제품·자동화: EP105 What happens when your users become the builders?; Is This Okay? How Override Labs Built a Safety-First AI Consent Coach for Teen Boys; The new product introduction process: How to make sure your Agent is ready every time you ship 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
-- 조직 운영·협업: The Hidden Tax on Every Product Decision 등을 통해 지속 이슈로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
-- 제품 지표·실험·성장: 🧠 Community Wisdom: Beating a career slump, adding more structure to an established team, questions for new-team 1:1s, the evolving shape of the growth role, and more 등을 통해 지속 이슈로 확인되었습니다. 기능 출시 후 성공 여부를 판단할 지표와 실험 설계를 사전에 정의하는 실무 기준으로 활용할 수 있습니다.
+- AI 기반 제품·자동화: No Figma. No Jira. No docs. How Gusto built a new product line with Claude Code | Eddie Kim (CTO); How to measure the customer experience as AI scales; How top PMs increase their leverage with AI 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
+- 서비스 및 제품 전략: Great Products, Bad Companies 등을 통해 신규 관찰로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 
 ## 2. 주요 인사이트
 ### [AI 기반 제품·자동화]
 - 중요도: HIGH
-- 핵심 내용: EP105 What happens when your users become the builders? — In this episode, Jay Stansell interviews Saurabh Sharma, a product leader with extensive experience at Google and u.com, exploring how enterprise AI products are transforming product management, user engagement, and agent management. Discover insights on building primitives, managing evolving roadmaps, and the future of AI-driven workflows.
-- 등장 배경: Product Coalition에 2026-06-26 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: EP105 What happens when your users become the builders?; Is This Okay? How Override Labs Built a Safety-First AI Consent Coach for Teen Boys; The new product introduction process: How to make sure your Agent is ready every time you ship; The new inner game: Your unfair advantage in the age of AI. 이전 리포트 대비 구분: 지속.
+- 핵심 내용: No Figma. No Jira. No docs. How Gusto built a new product line with Claude Code | Eddie Kim (CTO) — Watch now | 🎙️ Eddie Kim, the CTO of Gusto, shows how a 5-person team shipped a full AI product line in 10 weeks using Claude Code, a perma-Zoom, and zero documentation
+- 등장 배경: Lenny's Newsletter에 2026-06-29 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: No Figma. No Jira. No docs. How Gusto built a new product line with Claude Code | Eddie Kim (CTO); How to measure the customer experience as AI scales; How top PMs increase their leverage with AI; 🎙️ How I AI: GLM-5.2 review & How Gusto built a new product line with Claude Code. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
 - 팀에서 논의할 질문: 우리 서비스에서 AI가 실제로 줄여야 하는 사용자/운영자의 반복 업무는 무엇인가?
-- 출처: EP105 What happens when your users become the builders?, Product Coalition, https://www.productcoalition.com/p/ep105-what-happens-when-your-users
-- 발행일: 2026-06-26
+- 출처: No Figma. No Jira. No docs. How Gusto built a new product line with Claude Code | Eddie Kim (CTO), Lenny's Newsletter, https://www.lennysnewsletter.com/p/no-figma-no-jira-no-docs-how-gusto
+- 발행일: 2026-06-29
 
-### [조직 운영·협업]
-- 중요도: HIGH
-- 핵심 내용: The Hidden Tax on Every Product Decision — Every Product Team Knows the Cost of Building. Almost None Know the Cost of Getting It Wrong.
-- 등장 배경: Product Coalition에 2026-06-25 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: The Hidden Tax on Every Product Decision. 이전 리포트 대비 구분: 지속.
+### [서비스 및 제품 전략]
+- 중요도: MEDIUM
+- 핵심 내용: Great Products, Bad Companies — I have long argued that great products are what powers great companies. And while I still believe that great products are necessary for great companies, it’s become quite clear over the years that great products are not sufficient. In fact, as counter-intuitive as this sounds, I have seen too many examples where great products can... The post Great Products, Bad Companies appeared first on Silicon Valley Product Group .
+- 등장 배경: SVPG에 2026-06-30 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Great Products, Bad Companies. 이전 리포트 대비 구분: 신규.
 - 실무적으로 중요한 이유: 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
 - 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
-- 출처: The Hidden Tax on Every Product Decision, Product Coalition, https://www.productcoalition.com/p/the-fine-print-that-cost-a-fortune
-- 발행일: 2026-06-25
-
-### [제품 지표·실험·성장]
-- 중요도: HIGH
-- 핵심 내용: 🧠 Community Wisdom: Beating a career slump, adding more structure to an established team, questions for new-team 1:1s, the evolving shape of the growth role, and more — Community Wisdom 191
-- 등장 배경: Lenny's Newsletter에 2026-06-27 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 🧠 Community Wisdom: Beating a career slump, adding more structure to an established team, questions for new-team 1:1s, the evolving shape of the growth role, and more. 이전 리포트 대비 구분: 지속.
-- 실무적으로 중요한 이유: 기능 출시 후 성공 여부를 판단할 지표와 실험 설계를 사전에 정의하는 실무 기준으로 활용할 수 있습니다.
-- 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
-- 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
-- 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
-- 출처: 🧠 Community Wisdom: Beating a career slump, adding more structure to an established team, questions for new-team 1:1s, the evolving shape of the growth role, and more, Lenny's Newsletter, https://www.lennysnewsletter.com/p/community-wisdom-beating-a-career
-- 발행일: 2026-06-27
-
-### [UX·고객 경험]
-- 중요도: LOW
-- 핵심 내용: Creating Experiences - All Things Product Podcast with Teresa Torres & Petra Wille — Listen to this episode on: Spotify | Apple Podcasts What makes an event truly unforgettable — and what can product teams learn from it? In this episode, Teresa sits down with Petra Wille to explore how Petra and her co-organizer Arne design experiences (not just events) at Product at Heart
-- 등장 배경: Product Talk에 2026-06-23 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Creating Experiences - All Things Product Podcast with Teresa Torres & Petra Wille. 이전 리포트 대비 구분: 지속.
-- 실무적으로 중요한 이유: 화면 단위 개선보다 전체 고객 여정과 예외 케이스까지 포함한 경험 설계 관점이 필요합니다.
-- 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
-- 적용 시 주의사항: 광고성·일반론 가능성이 있으므로 바로 적용하기보다 내부 맥락과 맞는지 확인이 필요합니다.
-- 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
-- 출처: Creating Experiences - All Things Product Podcast with Teresa Torres & Petra Wille, Product Talk, https://www.producttalk.org/creating-experiences-all-things-product-podcast-with-teresa-torres-petra-wille/
-- 발행일: 2026-06-23
+- 출처: Great Products, Bad Companies, SVPG, https://www.svpg.com/great-products-bad-companies/
+- 발행일: 2026-06-30
 
 ## 3. 역할별 시사점
 
@@ -112,7 +89,5 @@
 - 단순 홍보성 콘텐츠와 실무 적용 가능한 사례를 계속 분리해 평가 필요
 
 ## 7. 출처
-- EP105 What happens when your users become the builders?, Product Coalition, 2026-06-26, https://www.productcoalition.com/p/ep105-what-happens-when-your-users
-- The Hidden Tax on Every Product Decision, Product Coalition, 2026-06-25, https://www.productcoalition.com/p/the-fine-print-that-cost-a-fortune
-- 🧠 Community Wisdom: Beating a career slump, adding more structure to an established team, questions for new-team 1:1s, the evolving shape of the growth role, and more, Lenny's Newsletter, 2026-06-27, https://www.lennysnewsletter.com/p/community-wisdom-beating-a-career
-- Creating Experiences - All Things Product Podcast with Teresa Torres & Petra Wille, Product Talk, 2026-06-23, https://www.producttalk.org/creating-experiences-all-things-product-podcast-with-teresa-torres-petra-wille/
+- No Figma. No Jira. No docs. How Gusto built a new product line with Claude Code | Eddie Kim (CTO), Lenny's Newsletter, 2026-06-29, https://www.lennysnewsletter.com/p/no-figma-no-jira-no-docs-how-gusto
+- Great Products, Bad Companies, SVPG, 2026-06-30, https://www.svpg.com/great-products-bad-companies/
