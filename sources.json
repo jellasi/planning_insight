@@ -1,22 +1,79 @@
 {
   "report": {
     "target_audience": "서비스 기획자, Product Manager, Product Owner",
-    "focus_areas": [
-      "서비스 및 제품 전략",
-      "고객 문제 정의와 사용자 리서치",
-      "신규 기능 및 정책 설계",
-      "제품 발견과 가설 검증",
-      "로드맵 및 우선순위 관리",
-      "제품 지표와 데이터 분석",
-      "실험, A/B 테스트 및 성장 전략",
-      "UX 및 고객 경험",
-      "운영 프로세스와 어드민 설계",
-      "PM·PO 협업 및 조직 운영",
-      "AI 기반 제품 및 업무 자동화",
-      "국내외 제품 사례"
-    ]
+    "default_category": "기타 제품·기획 인사이트",
+    "max_items_total": 10,
+    "max_items_per_topic": 2,
+    "slack_max_items": 4,
+    "include_uncategorized": false
+  },
+  "categories": [
+    {
+      "name": "AI 기반 제품·자동화",
+      "keywords": ["ai", "ai product", "agent", "agentic", "llm", "gpt", "copilot", "automation", "automate", "generative", "인공지능", "자동화", "에이전트", "생성형"]
+    },
+    {
+      "name": "제품 발견·사용자 리서치",
+      "keywords": ["discovery", "user research", "customer research", "interview", "customer problem", "usability", "jobs to be done", "고객 문제", "리서치", "인터뷰", "사용자 조사", "사용성"]
+    },
+    {
+      "name": "제품 지표·실험·성장",
+      "keywords": ["metrics", "metric", "experiment", "a/b", "growth", "retention", "activation", "funnel", "cohort", "churn", "conversion", "analytics", "지표", "실험", "성장", "리텐션", "퍼널", "전환율", "이탈"]
+    },
+    {
+      "name": "제품 전략·로드맵",
+      "keywords": ["strategy", "roadmap", "prioritization", "prioritize", "vision", "portfolio", "positioning", "pricing", "product-market fit", "전략", "로드맵", "우선순위", "비전", "가격", "포지셔닝"]
+    },
+    {
+      "name": "기능·정책 설계",
+      "keywords": ["requirements", "spec", "specification", "policy", "admin", "onboarding", "edge case", "workflow", "요구사항", "기획", "정책", "어드민", "온보딩", "예외 처리", "화면 설계"]
+    },
+    {
+      "name": "UX·고객 경험",
+      "keywords": ["ux", "ui", "user experience", "customer experience", "journey", "design system", "design", "accessibility", "사용자 경험", "고객 경험", "디자인", "접근성", "여정"]
+    },
+    {
+      "name": "조직 운영·협업",
+      "keywords": ["team", "collaboration", "stakeholder", "leadership", "meeting", "culture", "hiring", "process", "operating model", "org", "org structure", "org design", "team structure", "headcount", "1:1", "career", "협업", "조직", "회의", "리더십", "채용", "프로세스", "문화", "조직 구조", "역할 분담", "커리어"]
+    },
+    {
+      "name": "국내외 제품 사례",
+      "keywords": ["case study", "lessons", "teardown", "postmortem", "how we", "what we learned", "사례", "회고", "적용기", "도입기", "구축기", "개선기"]
+    }
+  ],
+  "scoring": {
+    "high": [
+      "product strategy", "roadmap", "prioritization", "pricing", "metrics", "experimentation",
+      "a/b test", "growth", "retention", "activation", "churn", "ai product", "ai agent", "llm",
+      "automation", "customer research", "discovery", "north star", "gtm", "go-to-market",
+      "product-market fit", "onboarding",
+      "제품 전략", "로드맵", "우선순위", "실험", "지표", "리텐션", "고객 문제", "인공지능",
+      "자동화", "온보딩", "이탈", "전환율", "기획"
+    ],
+    "medium": [
+      "product management", "product manager", "product owner", "ux", "user experience",
+      "customer experience", "collaboration", "stakeholder", "requirements", "backlog",
+      "usability", "analytics", "dashboard", "workflow", "feedback",
+      "사용자 경험", "협업", "요구사항", "백로그", "정책", "운영", "프로세스", "사용성",
+      "데이터 분석", "화면", "어드민"
+    ],
+    "penalty": ["sponsored", "sponsor", "webinar", "웨비나", "채용공고", "세미나", "광고"],
+    "priority_thresholds": {
+      "high": 3.0,
+      "medium": 1.5
+    }
   },
   "sources": [
+    {
+      "id": "yozm",
+      "name": "요즘IT",
+      "url": "https://yozm.wishket.com/magazine/feed/",
+      "type": "rss",
+      "language": "ko",
+      "weight": 1.15,
+      "date_from_page": true,
+      "notes": "국내 기획·PM·디자인 실무 콘텐츠. 피드에 pubDate가 없어 원문 페이지에서 발행일을 읽는다"
+    },
     {
       "id": "svpg",
       "name": "SVPG",
@@ -25,15 +82,6 @@
       "language": "en",
       "weight": 1.15,
       "notes": "Product strategy, product discovery, leadership"
-    },
-    {
-      "id": "intercom_blog",
-      "name": "Intercom Blog",
-      "url": "https://www.intercom.com/blog/feed",
-      "type": "rss",
-      "language": "en",
-      "weight": 1.05,
-      "notes": "AI product, customer support, growth, CX"
     },
     {
       "id": "lenny_newsletter",
@@ -54,6 +102,24 @@
       "notes": "Continuous discovery, customer interviews, product habits"
     },
     {
+      "id": "intercom_blog",
+      "name": "Intercom Blog",
+      "url": "https://www.intercom.com/blog/feed",
+      "type": "rss",
+      "language": "en",
+      "weight": 1.05,
+      "notes": "AI product, customer support, growth, CX"
+    },
+    {
+      "id": "toss_tech",
+      "name": "토스 기술블로그",
+      "url": "https://toss.tech/rss.xml",
+      "type": "rss",
+      "language": "ko",
+      "weight": 1.0,
+      "notes": "핀테크 제품·디자인·데이터. 우리 도메인과 인접"
+    },
+    {
       "id": "roman_pichler",
       "name": "Roman Pichler",
       "url": "https://www.romanpichler.com/feed/",
@@ -63,6 +129,15 @@
       "notes": "Product strategy, agile product management"
     },
     {
+      "id": "daangn",
+      "name": "당근 팀블로그",
+      "url": "https://medium.com/feed/daangn",
+      "type": "rss",
+      "language": "ko",
+      "weight": 0.95,
+      "notes": "국내 대규모 서비스의 제품·조직·데이터 운영 사례"
+    },
+    {
       "id": "product_coalition",
       "name": "Product Coalition",
       "url": "https://productcoalition.com/feed",
@@ -70,6 +145,15 @@
       "language": "en",
       "weight": 0.85,
       "notes": "Practitioner product management essays"
+    },
+    {
+      "id": "woowahan",
+      "name": "우아한형제들 기술블로그",
+      "url": "https://techblog.woowahan.com/feed/",
+      "type": "rss",
+      "language": "ko",
+      "weight": 0.85,
+      "notes": "국내 제품·운영·조직 사례. 엔지니어링 비중이 있어 가중치를 낮게 둔다"
     },
     {
       "id": "atlassian_work_life",
