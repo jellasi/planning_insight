@@ -1,51 +1,51 @@
-# 2026-08-10 ~ 2026-08-16 서비스 기획·PM·PO 인사이트 리포트
+# 2026-08-17 ~ 2026-08-23 서비스 기획·PM·PO 인사이트 리포트
 
 ## 리포트 정보
-- 리포트 기간: 2026-08-10 ~ 2026-08-16
-- 작성 기준일: 2026-08-16
+- 리포트 기간: 2026-08-17 ~ 2026-08-23
+- 작성 기준일: 2026-08-23
 - 주요 독자: 서비스 기획자, Product Manager, Product Owner
 - 관심 주제: 서비스 및 제품 전략, 고객 문제 정의와 사용자 리서치, 신규 기능 및 정책 설계, 제품 발견과 가설 검증, 로드맵 및 우선순위 관리, 제품 지표와 데이터 분석, 실험, A/B 테스트 및 성장 전략, UX 및 고객 경험, 운영 프로세스와 어드민 설계, PM·PO 협업 및 조직 운영, AI 기반 제품 및 업무 자동화, 국내외 제품 사례
 - 이전 리포트: 있음
-- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/31978668528
+- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/32673183414
 
 ## 1. Executive Summary
-- AI 기반 제품·자동화: 🎙️ How I AI: Build an AI code review bot in 30 minutes + Claude Code for normal people; Claude Code for normal people: skills, voice mode, and how to collaborate with AI; 🧠 Community Wisdom: Recovering from burnout, what Airtable’s sale says about the ceiling on a startup, keeping architecture docs up to date, running competitor analysis, and more 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
-- 제품 전략·로드맵: How to make people care about your startup 등을 통해 지속 이슈로 확인되었습니다. 로드맵 항목을 산출물이 아니라 고객 문제·사업 우선순위·검증 지표 중심으로 재정렬하는 데 참고할 수 있습니다.
-- 서비스 및 제품 전략: Announcing Evals and Releases: Evaluate Fin before, during, and after you go live; A Fresh Definition of The Product Role 등을 통해 지속 이슈로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
+- 제품 지표·실험·성장: Announcing Lenny’s Jobs: The best place in the world to find, vet, and land your dream job 등을 통해 신규 관찰로 확인되었습니다. 기능 출시 후 성공 여부를 판단할 지표와 실험 설계를 사전에 정의하는 실무 기준으로 활용할 수 있습니다.
+- AI 기반 제품·자동화: I tested Grok Bot, Grok 4.6, and Cursor Origin - here’s my honest take; 🎙️ How I AI: How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers; 🧠 Community Wisdom: Favorite Lenny’s Product Pass tools, how AI is reshaping hiring, what to prioritize when you join a new company, and more 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
+- 서비스 및 제품 전략: How to close $100K+ enterprise deals, step by step | Jen Abel; How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers | Yana Welinder 등을 통해 지속 이슈로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 
 ## 2. 주요 인사이트
+### [제품 지표·실험·성장]
+- 중요도: HIGH
+- 핵심 내용: Announcing Lenny’s Jobs: The best place in the world to find, vet, and land your dream job — Where product managers, engineers, designers, and growth/marketing professionals discover high-quality open roles at tech companies
+- 등장 배경: Lenny's Newsletter에 2026-08-18 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Announcing Lenny’s Jobs: The best place in the world to find, vet, and land your dream job. 이전 리포트 대비 구분: 신규.
+- 실무적으로 중요한 이유: 기능 출시 후 성공 여부를 판단할 지표와 실험 설계를 사전에 정의하는 실무 기준으로 활용할 수 있습니다.
+- 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
+- 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
+- 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
+- 출처: Announcing Lenny’s Jobs: The best place in the world to find, vet, and land your dream job, Lenny's Newsletter, https://www.lennysnewsletter.com/p/announcing-lennys-jobs-the-best-place
+- 발행일: 2026-08-18
+
 ### [AI 기반 제품·자동화]
 - 중요도: HIGH
-- 핵심 내용: 🎙️ How I AI: Build an AI code review bot in 30 minutes + Claude Code for normal people — Your weekly listens from How I AI, part of the Lenny's Podcast Network
-- 등장 배경: Lenny's Newsletter에 2026-08-10 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 🎙️ How I AI: Build an AI code review bot in 30 minutes + Claude Code for normal people; Claude Code for normal people: skills, voice mode, and how to collaborate with AI; 🧠 Community Wisdom: Recovering from burnout, what Airtable’s sale says about the ceiling on a startup, keeping architecture docs up to date, running competitor analysis, and more; OpenAI’s Head of Design: This is the best time in history to be a designer | Ian Silber. 이전 리포트 대비 구분: 지속.
+- 핵심 내용: I tested Grok Bot, Grok 4.6, and Cursor Origin - here’s my honest take — Watch now | 🎙️ I tested Grok Bot, Cursor Origin, and Grok 4.6 head-to-head against my favorite models and ranked them on the Claire Index: here's what actually moved the needle
+- 등장 배경: Lenny's Newsletter에 2026-08-18 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: I tested Grok Bot, Grok 4.6, and Cursor Origin - here’s my honest take; 🎙️ How I AI: How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers; 🧠 Community Wisdom: Favorite Lenny’s Product Pass tools, how AI is reshaping hiring, what to prioritize when you join a new company, and more. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
 - 팀에서 논의할 질문: 우리 서비스에서 AI가 실제로 줄여야 하는 사용자/운영자의 반복 업무는 무엇인가?
-- 출처: 🎙️ How I AI: Build an AI code review bot in 30 minutes + Claude Code for normal people, Lenny's Newsletter, https://www.lennysnewsletter.com/p/how-i-ai-build-an-ai-code-review
-- 발행일: 2026-08-10
-
-### [제품 전략·로드맵]
-- 중요도: HIGH
-- 핵심 내용: How to make people care about your startup — Three founder archetypes—and how to turn your origin story into a communications strategy
-- 등장 배경: Lenny's Newsletter에 2026-08-11 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: How to make people care about your startup. 이전 리포트 대비 구분: 지속.
-- 실무적으로 중요한 이유: 로드맵 항목을 산출물이 아니라 고객 문제·사업 우선순위·검증 지표 중심으로 재정렬하는 데 참고할 수 있습니다.
-- 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
-- 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
-- 팀에서 논의할 질문: 이번 분기 로드맵 항목은 어떤 지표 변화를 만들기 위한 것인가?
-- 출처: How to make people care about your startup, Lenny's Newsletter, https://www.lennysnewsletter.com/p/how-to-make-people-care-about-your
-- 발행일: 2026-08-11
+- 출처: I tested Grok Bot, Grok 4.6, and Cursor Origin - here’s my honest take, Lenny's Newsletter, https://www.lennysnewsletter.com/p/i-tested-grok-bot-grok-46-and-cursor
+- 발행일: 2026-08-18
 
 ### [서비스 및 제품 전략]
 - 중요도: HIGH
-- 핵심 내용: Announcing Evals and Releases: Evaluate Fin before, during, and after you go live — Providing a complete evaluation system for Fin, you can now test changes before they go live, roll them out with control, evaluate every live conversation, and have confidence in the experience Fin delivers.
-- 등장 배경: Intercom Blog에 2026-08-13 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Announcing Evals and Releases: Evaluate Fin before, during, and after you go live; A Fresh Definition of The Product Role. 이전 리포트 대비 구분: 지속.
+- 핵심 내용: How to close $100K+ enterprise deals, step by step | Jen Abel — Listen now | Jen Abel returns for a third time to walk us through every step of the enterprise sales cycle—from the first cold outreach to the final contract signature
+- 등장 배경: Lenny's Newsletter에 2026-08-23 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: How to close $100K+ enterprise deals, step by step | Jen Abel; How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers | Yana Welinder. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
 - 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
-- 출처: Announcing Evals and Releases: Evaluate Fin before, during, and after you go live, Intercom Blog, https://www.intercom.com/blog/announcing-evals-and-releases/
-- 발행일: 2026-08-13
+- 출처: How to close $100K+ enterprise deals, step by step | Jen Abel, Lenny's Newsletter, https://www.lennysnewsletter.com/p/how-to-close-100k-1m-deals-step-by
+- 발행일: 2026-08-23
 
 ## 3. 역할별 시사점
 
@@ -101,6 +101,9 @@
 - 단순 홍보성 콘텐츠와 실무 적용 가능한 사례를 계속 분리해 평가 필요
 
 ## 7. 출처
-- 🎙️ How I AI: Build an AI code review bot in 30 minutes + Claude Code for normal people, Lenny's Newsletter, 2026-08-10, https://www.lennysnewsletter.com/p/how-i-ai-build-an-ai-code-review
-- How to make people care about your startup, Lenny's Newsletter, 2026-08-11, https://www.lennysnewsletter.com/p/how-to-make-people-care-about-your
-- Announcing Evals and Releases: Evaluate Fin before, during, and after you go live, Intercom Blog, 2026-08-13, https://www.intercom.com/blog/announcing-evals-and-releases/
+- Announcing Lenny’s Jobs: The best place in the world to find, vet, and land your dream job, Lenny's Newsletter, 2026-08-18, https://www.lennysnewsletter.com/p/announcing-lennys-jobs-the-best-place
+- I tested Grok Bot, Grok 4.6, and Cursor Origin - here’s my honest take, Lenny's Newsletter, 2026-08-18, https://www.lennysnewsletter.com/p/i-tested-grok-bot-grok-46-and-cursor
+- How to close $100K+ enterprise deals, step by step | Jen Abel, Lenny's Newsletter, 2026-08-23, https://www.lennysnewsletter.com/p/how-to-close-100k-1m-deals-step-by
+
+## 수집 오류
+- Roman Pichler: URLError: <urlopen error timed out>
