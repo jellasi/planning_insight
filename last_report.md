@@ -1,39 +1,39 @@
-# 2026-08-24 ~ 2026-08-30 서비스 기획·PM·PO 인사이트 리포트
+# 2026-08-31 ~ 2026-09-06 서비스 기획·PM·PO 인사이트 리포트
 
 ## 리포트 정보
-- 리포트 기간: 2026-08-24 ~ 2026-08-30
-- 작성 기준일: 2026-08-31
+- 리포트 기간: 2026-08-31 ~ 2026-09-06
+- 작성 기준일: 2026-09-07
 - 주요 독자: 서비스 기획자, Product Manager, Product Owner
 - 관심 주제: 서비스 및 제품 전략, 고객 문제 정의와 사용자 리서치, 신규 기능 및 정책 설계, 제품 발견과 가설 검증, 로드맵 및 우선순위 관리, 제품 지표와 데이터 분석, 실험, A/B 테스트 및 성장 전략, UX 및 고객 경험, 운영 프로세스와 어드민 설계, PM·PO 협업 및 조직 운영, AI 기반 제품 및 업무 자동화, 국내외 제품 사례
 - 이전 리포트: 있음
-- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/33346432586
+- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/34070528140
 
 ## 1. Executive Summary
-- 서비스 및 제품 전략: How to figure out your next career move; 🧠 Community Wisdom: Building without clear PM requirements, selling a product before building it, pricing fast-moving B2B SaaS, a year of job hunting, and more 등을 통해 지속 이슈로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
-- AI 기반 제품·자동화: 🎙️ How I AI: Grok Bot + Grok 4.6—what’s great (and what’s still hype) & Lessons from spending $20,000 on Devin in one month; I spent $20,000 on Devin in a month. Here’s what I learned | Ryan Carson (solo founder); AI’s third era: the rise of persistent AI coworkers | Tara Seshan (OpenAI’s product lead) 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
+- AI 기반 제품·자동화: How to turn your AI into a world-class designer; AI Evals: A Hands-On Guide for Product Teams; How I turned Claude into a self-improving PM assistant | Daniel Blum (PM, Melio) 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
+- 서비스 및 제품 전략: GPT-6 Astra is a banger - here’s everything I’ve built 등을 통해 지속 이슈로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 
 ## 2. 주요 인사이트
-### [서비스 및 제품 전략]
-- 중요도: HIGH
-- 핵심 내용: How to figure out your next career move — Six essential questions to help you navigate change
-- 등장 배경: Lenny's Newsletter에 2026-08-25 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: How to figure out your next career move; 🧠 Community Wisdom: Building without clear PM requirements, selling a product before building it, pricing fast-moving B2B SaaS, a year of job hunting, and more. 이전 리포트 대비 구분: 지속.
-- 실무적으로 중요한 이유: 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
-- 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
-- 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
-- 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
-- 출처: How to figure out your next career move, Lenny's Newsletter, https://www.lennysnewsletter.com/p/how-to-figure-out-your-next-career
-- 발행일: 2026-08-25
-
 ### [AI 기반 제품·자동화]
 - 중요도: HIGH
-- 핵심 내용: 🎙️ How I AI: Grok Bot + Grok 4.6—what’s great (and what’s still hype) & Lessons from spending $20,000 on Devin in one month — Your weekly listens from How I AI, part of the Lenny’s Podcast Network
-- 등장 배경: Lenny's Newsletter에 2026-08-24 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 🎙️ How I AI: Grok Bot + Grok 4.6—what’s great (and what’s still hype) & Lessons from spending $20,000 on Devin in one month; I spent $20,000 on Devin in a month. Here’s what I learned | Ryan Carson (solo founder); AI’s third era: the rise of persistent AI coworkers | Tara Seshan (OpenAI’s product lead). 이전 리포트 대비 구분: 지속.
+- 핵심 내용: How to turn your AI into a world-class designer — An end-to-end process for tapping into AI’s hidden creativity
+- 등장 배경: Lenny's Newsletter에 2026-09-01 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: How to turn your AI into a world-class designer; AI Evals: A Hands-On Guide for Product Teams; How I turned Claude into a self-improving PM assistant | Daniel Blum (PM, Melio); 🎙️ How I AI: How this PM uses Claude to handle 70% to 80% of his workday. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
 - 팀에서 논의할 질문: 우리 서비스에서 AI가 실제로 줄여야 하는 사용자/운영자의 반복 업무는 무엇인가?
-- 출처: 🎙️ How I AI: Grok Bot + Grok 4.6—what’s great (and what’s still hype) & Lessons from spending $20,000 on Devin in one month, Lenny's Newsletter, https://www.lennysnewsletter.com/p/how-i-ai-grok-bot-grok-46whats-great
-- 발행일: 2026-08-24
+- 출처: How to turn your AI into a world-class designer, Lenny's Newsletter, https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world
+- 발행일: 2026-09-01
+
+### [서비스 및 제품 전략]
+- 중요도: MEDIUM
+- 핵심 내용: GPT-6 Astra is a banger - here’s everything I’ve built — Watch now | 🎙️ My hands-on GPT-6 Astra review covers real production work in Figma, Flora, and Adio, one-shot coding wins 5.6 and Fable couldn’t match, and a hardware hack I’ve chased for months
+- 등장 배경: Lenny's Newsletter에 2026-09-03 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: GPT-6 Astra is a banger - here’s everything I’ve built. 이전 리포트 대비 구분: 지속.
+- 실무적으로 중요한 이유: 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
+- 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
+- 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
+- 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
+- 출처: GPT-6 Astra is a banger - here’s everything I’ve built, Lenny's Newsletter, https://www.lennysnewsletter.com/p/gpt-6-astra-is-a-banger-heres-everything
+- 발행일: 2026-09-03
 
 ## 3. 역할별 시사점
 
@@ -89,5 +89,5 @@
 - 단순 홍보성 콘텐츠와 실무 적용 가능한 사례를 계속 분리해 평가 필요
 
 ## 7. 출처
-- How to figure out your next career move, Lenny's Newsletter, 2026-08-25, https://www.lennysnewsletter.com/p/how-to-figure-out-your-next-career
-- 🎙️ How I AI: Grok Bot + Grok 4.6—what’s great (and what’s still hype) & Lessons from spending $20,000 on Devin in one month, Lenny's Newsletter, 2026-08-24, https://www.lennysnewsletter.com/p/how-i-ai-grok-bot-grok-46whats-great
+- How to turn your AI into a world-class designer, Lenny's Newsletter, 2026-09-01, https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world
+- GPT-6 Astra is a banger - here’s everything I’ve built, Lenny's Newsletter, 2026-09-03, https://www.lennysnewsletter.com/p/gpt-6-astra-is-a-banger-heres-everything
