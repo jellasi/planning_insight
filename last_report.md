@@ -1,62 +1,73 @@
-# 2026-09-07 ~ 2026-09-13 서비스 기획·PM·PO 인사이트 리포트
+# 2026-09-14 ~ 2026-09-20 서비스 기획·PM·PO 인사이트 리포트
 
 ## 리포트 정보
-- 리포트 기간: 2026-09-07 ~ 2026-09-13
-- 작성 기준일: 2026-09-14
+- 리포트 기간: 2026-09-14 ~ 2026-09-20
+- 작성 기준일: 2026-09-21
 - 주요 독자: 서비스 기획자, Product Manager, Product Owner
 - 관심 주제: 서비스 및 제품 전략, 고객 문제 정의와 사용자 리서치, 신규 기능 및 정책 설계, 제품 발견과 가설 검증, 로드맵 및 우선순위 관리, 제품 지표와 데이터 분석, 실험, A/B 테스트 및 성장 전략, UX 및 고객 경험, 운영 프로세스와 어드민 설계, PM·PO 협업 및 조직 운영, AI 기반 제품 및 업무 자동화, 국내외 제품 사례
 - 이전 리포트: 있음
-- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/34793508063
+- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/35548883739
 
 ## 1. Executive Summary
-- AI 기반 제품·자동화: How we built Grok Bot in a month | Roman Ugarte (SpaceXAI); Announcing the 2026 AI Sentiment Report: How end users feel about AI Agents; 🎙️ How I AI: GPT-6 Astra is a banger + Stripe’s AI playbook + Grok Bot vs. OpenClaw: why I replaced my entire agent stack 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
-- 제품 지표·실험·성장: Your Growth Chart Is Lying to You 등을 통해 신규 관찰로 확인되었습니다. 기능 출시 후 성공 여부를 판단할 지표와 실험 설계를 사전에 정의하는 실무 기준으로 활용할 수 있습니다.
-- 서비스 및 제품 전략: Strong Opinions, Loosely Held 등을 통해 지속 이슈로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
+- AI 기반 제품·자동화: Delivery Isn’t Free - All Things Product Podcast with Teresa Torres & Petra Wille; How Grok Bot designers use AI agents to build personal sites and product prototypes | John Bai & Peng Zheng; Muse review: The personal AI agent that gets consumer UX right 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
+- 제품 지표·실험·성장: 60+ new creative growth ideas 등을 통해 지속 이슈로 확인되었습니다. 기능 출시 후 성공 여부를 판단할 지표와 실험 설계를 사전에 정의하는 실무 기준으로 활용할 수 있습니다.
+- UX·고객 경험: 90 minutes of unfiltered product advice from Snap and Discord’s product chief | Peter Sellis 등을 통해 신규 관찰로 확인되었습니다. 화면 단위 개선보다 전체 고객 여정과 예외 케이스까지 포함한 경험 설계 관점이 필요합니다.
 
 ## 2. 주요 인사이트
 ### [AI 기반 제품·자동화]
 - 중요도: HIGH
-- 핵심 내용: How we built Grok Bot in a month | Roman Ugarte (SpaceXAI) — Listen now | Roman Ugarte of SpaceXAI on going from first line of code to the world’s hottest AI product in seven weeks, and what it really takes to win in the most competitive market ever
-- 등장 배경: Lenny's Newsletter에 2026-09-08 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: How we built Grok Bot in a month | Roman Ugarte (SpaceXAI); Announcing the 2026 AI Sentiment Report: How end users feel about AI Agents; 🎙️ How I AI: GPT-6 Astra is a banger + Stripe’s AI playbook + Grok Bot vs. OpenClaw: why I replaced my entire agent stack; Build your own company brain: the enterprise AI playbook from Stripe’s engineering team | Sharadh Krishnamurthy. 이전 리포트 대비 구분: 지속.
+- 핵심 내용: Delivery Isn’t Free - All Things Product Podcast with Teresa Torres & Petra Wille — Listen to this episode on: Spotify | Apple Podcasts Everyone's saying it: "Now that AI makes delivery free…" But is it? In this episode of All Things Product, Petra Wille and Teresa Torres pull apart one of the most repeated claims in product right now. They
+- 등장 배경: Product Talk에 2026-09-15 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Delivery Isn’t Free - All Things Product Podcast with Teresa Torres & Petra Wille; How Grok Bot designers use AI agents to build personal sites and product prototypes | John Bai & Peng Zheng; Muse review: The personal AI agent that gets consumer UX right; Creating Aha! Builder: Concept to Code, No Engineers Required. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
 - 팀에서 논의할 질문: 우리 서비스에서 AI가 실제로 줄여야 하는 사용자/운영자의 반복 업무는 무엇인가?
-- 출처: How we built Grok Bot in a month | Roman Ugarte (SpaceXAI), Lenny's Newsletter, https://www.lennysnewsletter.com/p/how-we-built-grok-bot-in-a-month
-- 발행일: 2026-09-08
+- 출처: Delivery Isn’t Free - All Things Product Podcast with Teresa Torres & Petra Wille, Product Talk, https://www.producttalk.org/delivery-isnt-free-all-things-product-podcast-with-teresa-torres-petra-wille/
+- 발행일: 2026-09-15
 
 ### [제품 지표·실험·성장]
 - 중요도: HIGH
-- 핵심 내용: Your Growth Chart Is Lying to You — Acquisition metrics flatter you. CLTV tells you whether you built a business.
-- 등장 배경: Product Coalition에 2026-09-08 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Your Growth Chart Is Lying to You. 이전 리포트 대비 구분: 신규.
+- 핵심 내용: 60+ new creative growth ideas — How to stand out when everyone is running the same playbook
+- 등장 배경: Lenny's Newsletter에 2026-09-15 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 60+ new creative growth ideas. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: 기능 출시 후 성공 여부를 판단할 지표와 실험 설계를 사전에 정의하는 실무 기준으로 활용할 수 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
 - 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
-- 출처: Your Growth Chart Is Lying to You, Product Coalition, https://www.productcoalition.com/p/the-only-number-your-product-cannot
-- 발행일: 2026-09-08
+- 출처: 60+ new creative growth ideas, Lenny's Newsletter, https://www.lennysnewsletter.com/p/60-creative-growth-ideas
+- 발행일: 2026-09-15
+
+### [UX·고객 경험]
+- 중요도: HIGH
+- 핵심 내용: 90 minutes of unfiltered product advice from Snap and Discord’s product chief | Peter Sellis — Peter Sellis on designing teams like terrorist organizations, riding your best people hard, and the three oxymorons of a truly great PM
+- 등장 배경: Lenny's Newsletter에 2026-09-20 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 90 minutes of unfiltered product advice from Snap and Discord’s product chief | Peter Sellis. 이전 리포트 대비 구분: 신규.
+- 실무적으로 중요한 이유: 화면 단위 개선보다 전체 고객 여정과 예외 케이스까지 포함한 경험 설계 관점이 필요합니다.
+- 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
+- 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
+- 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
+- 출처: 90 minutes of unfiltered product advice from Snap and Discord’s product chief | Peter Sellis, Lenny's Newsletter, https://www.lennysnewsletter.com/p/90-minutes-of-unfiltered-product
+- 발행일: 2026-09-20
 
 ### [서비스 및 제품 전략]
-- 중요도: HIGH
-- 핵심 내용: Strong Opinions, Loosely Held — Note: This is the narrative version of a keynote talk for the Lenny & Friends Summit. Recently I was asked a question that I haven’t been able to get out of my head: “In light of all that has changed, what are the things that you used to argue were true, that you no longer... The post Strong Opinions, Loosely Held appeared first on Silicon Valley Product Group .
-- 등장 배경: SVPG에 2026-09-11 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Strong Opinions, Loosely Held. 이전 리포트 대비 구분: 지속.
+- 중요도: MEDIUM
+- 핵심 내용: The North Star Metric Was Never the Business — From 2015 to today, the archive shows one number moving from KPI to rule to warning
+- 등장 배경: Product Coalition에 2026-09-15 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: The North Star Metric Was Never the Business. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
 - 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
-- 출처: Strong Opinions, Loosely Held, SVPG, https://www.svpg.com/strong-opinions-loosely-held/
-- 발행일: 2026-09-11
+- 출처: The North Star Metric Was Never the Business, Product Coalition, https://www.productcoalition.com/p/the-north-star-metric-was-never-the
+- 발행일: 2026-09-15
 
-### [조직 운영·협업]
-- 중요도: LOW
-- 핵심 내용: Facilitation Skills - All Things Product Podcast with Teresa Torres & Petra Wille — Listen to this episode on: Spotify | Apple Podcasts Conflict on a product team isn't a warning sign — the absence of it usually is. In this episode of All Things Product, Petra Wille and Teresa Torres tackle a question Teresa hears constantly: what should a product trio do
-- 등장 배경: Product Talk에 2026-09-08 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Facilitation Skills - All Things Product Podcast with Teresa Torres & Petra Wille. 이전 리포트 대비 구분: 신규.
-- 실무적으로 중요한 이유: 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
+### [제품 발견·사용자 리서치]
+- 중요도: MEDIUM
+- 핵심 내용: 🧠 Community Wisdom: Finding your first users before the product exists, debriefing your own interviews, what to optimize for in the early years of your career, and more — Community Wisdom 299
+- 등장 배경: Lenny's Newsletter에 2026-09-19 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 🧠 Community Wisdom: Finding your first users before the product exists, debriefing your own interviews, what to optimize for in the early years of your career, and more. 이전 리포트 대비 구분: 신규.
+- 실무적으로 중요한 이유: 요구사항 작성 전 고객 문제와 검증 가설을 명확히 분리해 백로그 품질을 높이는 데 활용할 수 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
-- 적용 시 주의사항: 광고성·일반론 가능성이 있으므로 바로 적용하기보다 내부 맥락과 맞는지 확인이 필요합니다.
-- 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
-- 출처: Facilitation Skills - All Things Product Podcast with Teresa Torres & Petra Wille, Product Talk, https://www.producttalk.org/facilitation-skills-all-things-product-with-teresa-torres-petra-wille/
-- 발행일: 2026-09-08
+- 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
+- 팀에서 논의할 질문: 현재 백로그 중 고객 문제 검증 없이 해결책부터 정해진 항목은 무엇인가?
+- 출처: 🧠 Community Wisdom: Finding your first users before the product exists, debriefing your own interviews, what to optimize for in the early years of your career, and more, Lenny's Newsletter, https://www.lennysnewsletter.com/p/community-wisdom-finding-your-first
+- 발행일: 2026-09-19
 
 ## 3. 역할별 시사점
 
@@ -112,7 +123,8 @@
 - 단순 홍보성 콘텐츠와 실무 적용 가능한 사례를 계속 분리해 평가 필요
 
 ## 7. 출처
-- How we built Grok Bot in a month | Roman Ugarte (SpaceXAI), Lenny's Newsletter, 2026-09-08, https://www.lennysnewsletter.com/p/how-we-built-grok-bot-in-a-month
-- Your Growth Chart Is Lying to You, Product Coalition, 2026-09-08, https://www.productcoalition.com/p/the-only-number-your-product-cannot
-- Strong Opinions, Loosely Held, SVPG, 2026-09-11, https://www.svpg.com/strong-opinions-loosely-held/
-- Facilitation Skills - All Things Product Podcast with Teresa Torres & Petra Wille, Product Talk, 2026-09-08, https://www.producttalk.org/facilitation-skills-all-things-product-with-teresa-torres-petra-wille/
+- Delivery Isn’t Free - All Things Product Podcast with Teresa Torres & Petra Wille, Product Talk, 2026-09-15, https://www.producttalk.org/delivery-isnt-free-all-things-product-podcast-with-teresa-torres-petra-wille/
+- 60+ new creative growth ideas, Lenny's Newsletter, 2026-09-15, https://www.lennysnewsletter.com/p/60-creative-growth-ideas
+- 90 minutes of unfiltered product advice from Snap and Discord’s product chief | Peter Sellis, Lenny's Newsletter, 2026-09-20, https://www.lennysnewsletter.com/p/90-minutes-of-unfiltered-product
+- The North Star Metric Was Never the Business, Product Coalition, 2026-09-15, https://www.productcoalition.com/p/the-north-star-metric-was-never-the
+- 🧠 Community Wisdom: Finding your first users before the product exists, debriefing your own interviews, what to optimize for in the early years of your career, and more, Lenny's Newsletter, 2026-09-19, https://www.lennysnewsletter.com/p/community-wisdom-finding-your-first
