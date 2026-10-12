@@ -1,51 +1,39 @@
-# 2026-09-28 ~ 2026-10-04 서비스 기획·PM·PO 인사이트 리포트
+# 2026-10-05 ~ 2026-10-11 서비스 기획·PM·PO 인사이트 리포트
 
 ## 리포트 정보
-- 리포트 기간: 2026-09-28 ~ 2026-10-04
-- 작성 기준일: 2026-10-05
+- 리포트 기간: 2026-10-05 ~ 2026-10-11
+- 작성 기준일: 2026-10-12
 - 주요 독자: 서비스 기획자, Product Manager, Product Owner
 - 관심 주제: 서비스 및 제품 전략, 고객 문제 정의와 사용자 리서치, 신규 기능 및 정책 설계, 제품 발견과 가설 검증, 로드맵 및 우선순위 관리, 제품 지표와 데이터 분석, 실험, A/B 테스트 및 성장 전략, UX 및 고객 경험, 운영 프로세스와 어드민 설계, PM·PO 협업 및 조직 운영, AI 기반 제품 및 업무 자동화, 국내외 제품 사례
 - 이전 리포트: 있음
-- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/37251943018
+- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/38194210542
 
 ## 1. Executive Summary
-- 서비스 및 제품 전략: All of the Lenny & Friends Summit talks are now online!; Jev for beginners: how to use it and what to build; Agile's Real Opponent Was Never Waterfall 등을 통해 지속 이슈로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
-- AI 기반 제품·자동화: Generating Opportunity Solution Trees with AI: How Vistaly Rebuilt Its Product Around Interview Synthesis, Evals, and Repair Loops; OpenAI Dev Day 2026: The releases that actually matter; OpenAI’s Head of ChatGPT: We’re entering a new era of AI (again) | Tibo Sottiaux 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
-- 제품 발견·사용자 리서치: Unpacking Innovation - All Things Product Podcast with Teresa Torres & Petra Wille 등을 통해 지속 이슈로 확인되었습니다. 요구사항 작성 전 고객 문제와 검증 가설을 명확히 분리해 백로그 품질을 높이는 데 활용할 수 있습니다.
+- AI 기반 제품·자동화: 🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap; Why every company now needs to think and operate like a lab team | Josh Woodward (Google Labs, Gemini, AI Studio); Product Ethics in the Age of AI 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
+- 서비스 및 제품 전략: 🧠 Community Wisdom: Community Wisdom Top Contributors Summer Class 2026 + ML recommendation systems, getting back into product after being fired, deciding when to quit a side project, and more; The Persona Was Never Supposed to Be a Person 등을 통해 지속 이슈로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 
 ## 2. 주요 인사이트
-### [서비스 및 제품 전략]
-- 중요도: HIGH
-- 핵심 내용: All of the Lenny & Friends Summit talks are now online! — Plus, some reflections and takeaways from the day
-- 등장 배경: Lenny's Newsletter에 2026-09-29 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: All of the Lenny & Friends Summit talks are now online!; Jev for beginners: how to use it and what to build; Agile's Real Opponent Was Never Waterfall; The Loan Nobody Wrote Down. 이전 리포트 대비 구분: 지속.
-- 실무적으로 중요한 이유: 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
-- 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
-- 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
-- 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
-- 출처: All of the Lenny & Friends Summit talks are now online!, Lenny's Newsletter, https://www.lennysnewsletter.com/p/all-of-the-lenny-and-friends-summit
-- 발행일: 2026-09-29
-
 ### [AI 기반 제품·자동화]
 - 중요도: HIGH
-- 핵심 내용: Generating Opportunity Solution Trees with AI: How Vistaly Rebuilt Its Product Around Interview Synthesis, Evals, and Repair Loops — Listen to this episode on: Spotify | Apple Podcasts What happens when you hand your opportunity solution tree to an AI? Vistaly rebuilt its entire product to find out—and the agents were the easy part. In this episode of Just Now Possible , Teresa Torres talks with Matt O'
-- 등장 배경: Product Talk에 2026-10-01 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Generating Opportunity Solution Trees with AI: How Vistaly Rebuilt Its Product Around Interview Synthesis, Evals, and Repair Loops; OpenAI Dev Day 2026: The releases that actually matter; OpenAI’s Head of ChatGPT: We’re entering a new era of AI (again) | Tibo Sottiaux; 🎙️ How I AI: Jev for beginners + I left Claude for months, Opus 5.5 brought me back + Opus 5.5 vs. GPT-6 Sol bench. 이전 리포트 대비 구분: 지속.
+- 핵심 내용: 🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap — Your weekly listens from How I AI, part of the Lenny’s Podcast Network
+- 등장 배경: Lenny's Newsletter에 2026-10-05 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap; Why every company now needs to think and operate like a lab team | Josh Woodward (Google Labs, Gemini, AI Studio); Product Ethics in the Age of AI; The Customer Who Paid and Never Arrived. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
 - 팀에서 논의할 질문: 우리 서비스에서 AI가 실제로 줄여야 하는 사용자/운영자의 반복 업무는 무엇인가?
-- 출처: Generating Opportunity Solution Trees with AI: How Vistaly Rebuilt Its Product Around Interview Synthesis, Evals, and Repair Loops, Product Talk, https://www.producttalk.org/generating-opportunity-solution-trees-with-ai-how-vistaly-rebuilt-its-product-around-interview-synthesis-evals-and-repair-loops/
-- 발행일: 2026-10-01
+- 출처: 🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap, Lenny's Newsletter, https://www.lennysnewsletter.com/p/how-i-ai-8-real-jev-use-cases-how
+- 발행일: 2026-10-05
 
-### [제품 발견·사용자 리서치]
-- 중요도: LOW
-- 핵심 내용: Unpacking Innovation - All Things Product Podcast with Teresa Torres & Petra Wille — Listen to this episode on: Spotify | Apple Podcasts Is innovation the goal — or just a byproduct of solving customer problems well? In this episode of All Things Product, Petra Wille and Teresa Torres unpack one of the most misused words in product: "innovation." Teresa makes the case
-- 등장 배경: Product Talk에 2026-09-29 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Unpacking Innovation - All Things Product Podcast with Teresa Torres & Petra Wille. 이전 리포트 대비 구분: 지속.
-- 실무적으로 중요한 이유: 요구사항 작성 전 고객 문제와 검증 가설을 명확히 분리해 백로그 품질을 높이는 데 활용할 수 있습니다.
+### [서비스 및 제품 전략]
+- 중요도: HIGH
+- 핵심 내용: 🧠 Community Wisdom: Community Wisdom Top Contributors Summer Class 2026 + ML recommendation systems, getting back into product after being fired, deciding when to quit a side project, and more — Community Wisdom 301
+- 등장 배경: Lenny's Newsletter에 2026-10-10 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 🧠 Community Wisdom: Community Wisdom Top Contributors Summer Class 2026 + ML recommendation systems, getting back into product after being fired, deciding when to quit a side project, and more; The Persona Was Never Supposed to Be a Person. 이전 리포트 대비 구분: 지속.
+- 실무적으로 중요한 이유: 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
-- 적용 시 주의사항: 광고성·일반론 가능성이 있으므로 바로 적용하기보다 내부 맥락과 맞는지 확인이 필요합니다.
-- 팀에서 논의할 질문: 현재 백로그 중 고객 문제 검증 없이 해결책부터 정해진 항목은 무엇인가?
-- 출처: Unpacking Innovation - All Things Product Podcast with Teresa Torres & Petra Wille, Product Talk, https://www.producttalk.org/unpacking-innovation-all-things-product-podcast-with-teresa-torres-petra-wille/
-- 발행일: 2026-09-29
+- 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
+- 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
+- 출처: 🧠 Community Wisdom: Community Wisdom Top Contributors Summer Class 2026 + ML recommendation systems, getting back into product after being fired, deciding when to quit a side project, and more, Lenny's Newsletter, https://www.lennysnewsletter.com/p/community-wisdom-community-wisdom
+- 발행일: 2026-10-10
 
 ## 3. 역할별 시사점
 
@@ -101,6 +89,5 @@
 - 단순 홍보성 콘텐츠와 실무 적용 가능한 사례를 계속 분리해 평가 필요
 
 ## 7. 출처
-- All of the Lenny & Friends Summit talks are now online!, Lenny's Newsletter, 2026-09-29, https://www.lennysnewsletter.com/p/all-of-the-lenny-and-friends-summit
-- Generating Opportunity Solution Trees with AI: How Vistaly Rebuilt Its Product Around Interview Synthesis, Evals, and Repair Loops, Product Talk, 2026-10-01, https://www.producttalk.org/generating-opportunity-solution-trees-with-ai-how-vistaly-rebuilt-its-product-around-interview-synthesis-evals-and-repair-loops/
-- Unpacking Innovation - All Things Product Podcast with Teresa Torres & Petra Wille, Product Talk, 2026-09-29, https://www.producttalk.org/unpacking-innovation-all-things-product-podcast-with-teresa-torres-petra-wille/
+- 🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap, Lenny's Newsletter, 2026-10-05, https://www.lennysnewsletter.com/p/how-i-ai-8-real-jev-use-cases-how
+- 🧠 Community Wisdom: Community Wisdom Top Contributors Summer Class 2026 + ML recommendation systems, getting back into product after being fired, deciding when to quit a side project, and more, Lenny's Newsletter, 2026-10-10, https://www.lennysnewsletter.com/p/community-wisdom-community-wisdom
