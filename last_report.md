@@ -1,51 +1,39 @@
-# 2026-10-19 ~ 2026-10-25 서비스 기획·PM·PO 인사이트 리포트
+# 2026-10-26 ~ 2026-11-01 서비스 기획·PM·PO 인사이트 리포트
 
 ## 리포트 정보
-- 리포트 기간: 2026-10-19 ~ 2026-10-25
-- 작성 기준일: 2026-10-26
+- 리포트 기간: 2026-10-26 ~ 2026-11-01
+- 작성 기준일: 2026-11-02
 - 주요 독자: 서비스 기획자, Product Manager, Product Owner
 - 관심 주제: 서비스 및 제품 전략, 고객 문제 정의와 사용자 리서치, 신규 기능 및 정책 설계, 제품 발견과 가설 검증, 로드맵 및 우선순위 관리, 제품 지표와 데이터 분석, 실험, A/B 테스트 및 성장 전략, UX 및 고객 경험, 운영 프로세스와 어드민 설계, PM·PO 협업 및 조직 운영, AI 기반 제품 및 업무 자동화, 국내외 제품 사례
 - 이전 리포트: 있음
-- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/40251868324
+- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/41375759113
 
 ## 1. Executive Summary
-- AI 기반 제품·자동화: 🎙️ How I AI: Meta Muse Wonder + How Brooke Lacey is scaling video with AI; Claude Duet is beautiful. I still forgot to use it; Experimentation, AI and the Product Model 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
-- UX·고객 경험: 🧠 Community Wisdom: Negotiating a lowball offer, designers earning a seat in product decisions, resources for building an MCP server, and more 등을 통해 신규 관찰로 확인되었습니다. 화면 단위 개선보다 전체 고객 여정과 예외 케이스까지 포함한 경험 설계 관점이 필요합니다.
-- 서비스 및 제품 전략: An 86-minute guide to finding PMF | Rob Snyder (Author, The Power of Pull); NPS Never Told You Why 등을 통해 지속 이슈로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
+- AI 기반 제품·자동화: 🎙️ How I AI: Claude Duet honest review + Why Reddit built its own AI prototyping tool; Why Reddit built its own AI prototyping tool | Blair Metcalf; Defining What Good Looks Likes - All Things Product Podcast with Teresa Torres & Petra Wille 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
+- 조직 운영·협업: EP109 Why the Best Leaders Give Context, Not Direction with Norma Løvhaugen (Neat.no) and Jay Stansell 등을 통해 신규 관찰로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 
 ## 2. 주요 인사이트
 ### [AI 기반 제품·자동화]
 - 중요도: HIGH
-- 핵심 내용: 🎙️ How I AI: Meta Muse Wonder + How Brooke Lacey is scaling video with AI — Your weekly listens from How I AI, part of the Lenny's Podcast Network
-- 등장 배경: Lenny's Newsletter에 2026-10-19 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 🎙️ How I AI: Meta Muse Wonder + How Brooke Lacey is scaling video with AI; Claude Duet is beautiful. I still forgot to use it; Experimentation, AI and the Product Model; “Claude cuts my TikTok”: How this creator is scaling video with AI | Brooke Lacey. 이전 리포트 대비 구분: 지속.
+- 핵심 내용: 🎙️ How I AI: Claude Duet honest review + Why Reddit built its own AI prototyping tool — Your weekly listens from How I AI, part of the Lenny’s Podcast Network
+- 등장 배경: Lenny's Newsletter에 2026-10-26 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 🎙️ How I AI: Claude Duet honest review + Why Reddit built its own AI prototyping tool; Why Reddit built its own AI prototyping tool | Blair Metcalf; Defining What Good Looks Likes - All Things Product Podcast with Teresa Torres & Petra Wille; Grok vs. Dot vs. Muse vs. Claude Duet: which one crushes the competition?. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
 - 팀에서 논의할 질문: 우리 서비스에서 AI가 실제로 줄여야 하는 사용자/운영자의 반복 업무는 무엇인가?
-- 출처: 🎙️ How I AI: Meta Muse Wonder + How Brooke Lacey is scaling video with AI, Lenny's Newsletter, https://www.lennysnewsletter.com/p/how-i-ai-meta-muse-wonder-how-brooke
-- 발행일: 2026-10-19
+- 출처: 🎙️ How I AI: Claude Duet honest review + Why Reddit built its own AI prototyping tool, Lenny's Newsletter, https://www.lennysnewsletter.com/p/how-i-ai-claude-duet-honest-review
+- 발행일: 2026-10-26
 
-### [UX·고객 경험]
-- 중요도: MEDIUM
-- 핵심 내용: 🧠 Community Wisdom: Negotiating a lowball offer, designers earning a seat in product decisions, resources for building an MCP server, and more — Community Wisdom 303
-- 등장 배경: Lenny's Newsletter에 2026-10-24 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: 🧠 Community Wisdom: Negotiating a lowball offer, designers earning a seat in product decisions, resources for building an MCP server, and more. 이전 리포트 대비 구분: 신규.
-- 실무적으로 중요한 이유: 화면 단위 개선보다 전체 고객 여정과 예외 케이스까지 포함한 경험 설계 관점이 필요합니다.
-- 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
-- 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
-- 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
-- 출처: 🧠 Community Wisdom: Negotiating a lowball offer, designers earning a seat in product decisions, resources for building an MCP server, and more, Lenny's Newsletter, https://www.lennysnewsletter.com/p/community-wisdom-negotiating-a-lowball
-- 발행일: 2026-10-24
-
-### [서비스 및 제품 전략]
-- 중요도: MEDIUM
-- 핵심 내용: An 86-minute guide to finding PMF | Rob Snyder (Author, The Power of Pull) — Listen now (86 mins) | The founder who helped over 50 startups hit $1M ARR shares his PULL framework for finding real product-market fit
-- 등장 배경: Lenny's Newsletter에 2026-10-25 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: An 86-minute guide to finding PMF | Rob Snyder (Author, The Power of Pull); NPS Never Told You Why. 이전 리포트 대비 구분: 지속.
+### [조직 운영·협업]
+- 중요도: LOW
+- 핵심 내용: EP109 Why the Best Leaders Give Context, Not Direction with Norma Løvhaugen (Neat.no) and Jay Stansell — A team can deliver exactly what a customer requested and still solve the wrong problem.
+- 등장 배경: Product Coalition에 2026-10-30 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: EP109 Why the Best Leaders Give Context, Not Direction with Norma Løvhaugen (Neat.no) and Jay Stansell. 이전 리포트 대비 구분: 신규.
 - 실무적으로 중요한 이유: 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
-- 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
+- 적용 시 주의사항: 광고성·일반론 가능성이 있으므로 바로 적용하기보다 내부 맥락과 맞는지 확인이 필요합니다.
 - 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
-- 출처: An 86-minute guide to finding PMF | Rob Snyder (Author, The Power of Pull), Lenny's Newsletter, https://www.lennysnewsletter.com/p/an-86-minute-guide-to-finding-pmf
-- 발행일: 2026-10-25
+- 출처: EP109 Why the Best Leaders Give Context, Not Direction with Norma Løvhaugen (Neat.no) and Jay Stansell, Product Coalition, https://www.productcoalition.com/p/ep109-why-the-best-leaders-give-context
+- 발행일: 2026-10-30
 
 ## 3. 역할별 시사점
 
@@ -101,6 +89,5 @@
 - 단순 홍보성 콘텐츠와 실무 적용 가능한 사례를 계속 분리해 평가 필요
 
 ## 7. 출처
-- 🎙️ How I AI: Meta Muse Wonder + How Brooke Lacey is scaling video with AI, Lenny's Newsletter, 2026-10-19, https://www.lennysnewsletter.com/p/how-i-ai-meta-muse-wonder-how-brooke
-- 🧠 Community Wisdom: Negotiating a lowball offer, designers earning a seat in product decisions, resources for building an MCP server, and more, Lenny's Newsletter, 2026-10-24, https://www.lennysnewsletter.com/p/community-wisdom-negotiating-a-lowball
-- An 86-minute guide to finding PMF | Rob Snyder (Author, The Power of Pull), Lenny's Newsletter, 2026-10-25, https://www.lennysnewsletter.com/p/an-86-minute-guide-to-finding-pmf
+- 🎙️ How I AI: Claude Duet honest review + Why Reddit built its own AI prototyping tool, Lenny's Newsletter, 2026-10-26, https://www.lennysnewsletter.com/p/how-i-ai-claude-duet-honest-review
+- EP109 Why the Best Leaders Give Context, Not Direction with Norma Løvhaugen (Neat.no) and Jay Stansell, Product Coalition, 2026-10-30, https://www.productcoalition.com/p/ep109-why-the-best-leaders-give-context
