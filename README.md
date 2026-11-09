@@ -9,6 +9,8 @@
 - 주간 기간 필터링
 - Product Intelligence Analyst 프롬프트 구조에 맞춘 결과 생성
 - JSON 출력 + 상세 Markdown 리포트 + Slack용 1,200자 이내 요약 메시지 생성
+- 항목별 원문 바로가기 링크 삽입. Slack 메시지는 mrkdwn 문법(`*굵게*`, `<URL|텍스트>`)을 사용합니다
+- 역할별 시사점·실무 적용 제안·체크리스트를 그 주에 수집된 주제에 맞춰 구성
 - Slack Bot Token 또는 Incoming Webhook 발송
 - SMTP 이메일 발송
 
@@ -22,17 +24,47 @@
 
 설정 파일: `sources.json`
 
-초기 소스는 다음을 포함합니다.
+| 소스 | 언어 | 가중치 |
+|---|---|---|
+| 요즘IT | ko | 1.15 |
+| SVPG | en | 1.15 |
+| Lenny's Newsletter | en | 1.1 |
+| Product Talk | en | 1.1 |
+| Intercom Blog | en | 1.05 |
+| 토스 기술블로그 | ko | 1.0 |
+| Roman Pichler | en | 0.95 |
+| 당근 팀블로그 | ko | 0.95 |
+| Product Coalition | en | 0.85 |
+| 우아한형제들 기술블로그 | ko | 0.85 |
+| Atlassian Work Life | en | 0.8 |
 
-- SVPG
-- Intercom Blog
-- Lenny's Newsletter
-- Product Talk
-- Roman Pichler
-- Product Coalition
-- Atlassian Work Life
+RSS가 깨진 XML로 내려오는 경우가 있어, 스크립트는 XML 파싱 실패 시 느슨한 RSS item 추출 fallback을 사용합니다. 각 원문 URL은 가능한 경우 본문 excerpt를 추가로 스크래핑하고, `utm_*`·`source` 같은 트래킹 파라미터는 링크에서 제거합니다.
 
-RSS가 깨진 XML로 내려오는 경우가 있어, 스크립트는 XML 파싱 실패 시 느슨한 RSS item 추출 fallback을 사용합니다. 각 원문 URL은 가능한 경우 본문 excerpt를 추가로 스크래핑합니다.
+### 발행일이 없는 피드
+
+요즘IT처럼 RSS에 `pubDate`가 없는 피드는 기간 필터에서 전부 걸러집니다. 소스에 `"date_from_page": true`를 주면 원문 페이지의 JSON-LD `datePublished`, `meta[name=date]`, `article:published_time`, `<time datetime>` 순으로 발행일을 찾습니다. 본문 excerpt를 받아올 때 쓰는 응답을 재사용하므로 추가 요청은 발생하지 않습니다.
+
+## 분류·점수 설정
+
+분류 규칙과 점수 키워드는 모두 `sources.json`에 있습니다. 이 파일만 고치면 `monitor.py` 수정 없이 리포트 성향을 바꿀 수 있습니다.
+
+| 블록 | 역할 |
+|---|---|
+| `categories` | 주제 분류 기준. 항목별 `keywords` 중 **가장 많이 매칭된** 카테고리로 분류됩니다 |
+| `report.default_category` | 어떤 카테고리에도 걸리지 않은 항목이 들어갈 이름 |
+| `report.include_uncategorized` | `false`면 미분류 항목을 리포트에서 제외합니다(다른 항목이 하나도 없으면 예외적으로 포함) |
+| `scoring.high` / `scoring.medium` | 중요도 점수 키워드. HIGH는 2점, MEDIUM은 1점 |
+| `scoring.penalty` | 홍보성 콘텐츠 감점 키워드. 건당 -0.8점 |
+| `scoring.priority_thresholds` | HIGH/MEDIUM 판정 기준 점수 |
+| `report.max_items_total` | 리포트에 실을 최대 건수 |
+| `report.max_items_per_topic` | 한 주제가 리포트를 독점하지 않도록 하는 주제별 상한 |
+| `report.slack_max_items` | Slack 메시지에 실을 건수 |
+
+키워드 매칭 규칙:
+
+- 영문 키워드는 ASCII 단어 경계로 매칭합니다. `ai`가 `email`·`detail` 안에서 매칭되지 않으면서 `LLM은`처럼 한글 조사가 붙어도 매칭됩니다.
+- 한글 키워드는 부분 문자열로 매칭합니다. `지표`가 `핵심지표를` 안에서도 잡혀야 하기 때문입니다.
+- 제목·요약에서의 매칭은 1점, 스크래핑한 본문에서만 나온 매칭은 0.5점으로 계산합니다. 본문에는 네비게이션·푸터 텍스트가 섞여 근거가 약하기 때문입니다.
 
 ## 실행 주기
 
@@ -112,9 +144,12 @@ python monitor.py --period-from 2026-06-23 --period-to 2026-06-28 --notify
     {
       "topic": "주제",
       "priority": "HIGH | MEDIUM | LOW",
+      "title": "원문 제목",
       "summary": "핵심 내용",
       "practical_implication": "실무 시사점",
-      "source_url": "출처 URL"
+      "source": "출처 매체명",
+      "published_at": "YYYY-MM-DD",
+      "source_url": "원문 바로가기 URL"
     }
   ],
   "detailed_report_markdown": "상세 리포트",
