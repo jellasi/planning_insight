@@ -34,6 +34,7 @@ DEFAULT_CONFIG = ROOT / "sources.json"
 DEFAULT_REPORT_JSON = ROOT / "last_report.json"
 DEFAULT_REPORT_MD = ROOT / "last_report.md"
 DEFAULT_SLACK = ROOT / "last_slack_message.md"
+DEFAULT_SLACK_THREAD = ROOT / "last_slack_thread.json"
 
 USER_AGENT = "Mozilla/5.0 PlanningInsightBot/1.0 (+https://github.com/jellasi/planning_insight)"
 
@@ -205,6 +206,14 @@ def article_excerpt(url: str) -> str:
     return textwrap.shorten(text, width=1300, placeholder="...")
 
 
+def kw_in(kw: str, text: str) -> bool:
+    kw = kw.lower()
+    if re.fullmatch(r"[a-z0-9/ \-]+", kw):
+        # 단어 단위(복수형 s 허용): 'ai' 는 email·detail 에 걸리지 않고, 'team' 은 teams 에도 걸린다.
+        return re.search(r"(?<![a-z0-9])" + re.escape(kw) + r"s?(?![a-z0-9])", text) is not None
+    return kw in text
+
+
 def classify(title: str, summary: str, excerpt: str, weight: float) -> tuple[str, str, float]:
     # Topic classification intentionally uses title/summary only. Full-page excerpts often
     # contain shared navigation/sidebar text that over-biases categories such as AI.
@@ -212,10 +221,10 @@ def classify(title: str, summary: str, excerpt: str, weight: float) -> tuple[str
     score_text = f"{title}\n{summary}\n{excerpt}".lower()
     score = 0.0
     for kw in PM_KEYWORDS["HIGH"]:
-        if kw.lower() in score_text:
+        if kw_in(kw, score_text):
             score += 2.0
     for kw in PM_KEYWORDS["MEDIUM"]:
-        if kw.lower() in score_text:
+        if kw_in(kw, score_text):
             score += 1.0
     if "sponsored" in score_text or "webinar" in score_text or "event" in score_text:
         score -= 0.8
@@ -228,7 +237,7 @@ def classify(title: str, summary: str, excerpt: str, weight: float) -> tuple[str
         priority = "LOW"
     topic = "서비스 및 제품 전략"
     for name, kws in CATEGORY_RULES:
-        if any(kw.lower() in topic_text for kw in kws):
+        if any(kw_in(kw, topic_text) for kw in kws):
             topic = name
             break
     return topic, priority, round(score, 2)
@@ -310,7 +319,9 @@ def implication_for(item: ContentItem) -> str:
         return "기능 출시 후 성공 여부를 판단할 지표와 실험 설계를 사전에 정의하는 실무 기준으로 활용할 수 있습니다."
     if item.topic == "UX·고객 경험":
         return "화면 단위 개선보다 전체 고객 여정과 예외 케이스까지 포함한 경험 설계 관점이 필요합니다."
-    return "팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다."
+    if item.topic == "조직 운영·협업":
+        return "팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다."
+    return "다른 팀이 무엇을 만들지·만들지 않을지 어떤 기준으로 정했는지 보는 사례로, 우리 기획 우선순위 판단에 비교 기준으로 쓸 수 있습니다."
 
 
 def caution_for(item: ContentItem) -> str:
@@ -326,7 +337,58 @@ def discussion_question(item: ContentItem) -> str:
         return "현재 백로그 중 고객 문제 검증 없이 해결책부터 정해진 항목은 무엇인가?"
     if item.topic == "제품 전략·로드맵":
         return "이번 분기 로드맵 항목은 어떤 지표 변화를 만들기 위한 것인가?"
-    return "이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?"
+    if item.topic == "제품 지표·실험·성장":
+        return "지금 진행 중인 기능 중 성공 기준(지표·기간)을 정하지 않고 시작한 것은 무엇인가?"
+    if item.topic == "UX·고객 경험":
+        return "우리 고객 여정에서 이탈이 가장 큰 단계는 어디이고, 그 이유를 확인한 적이 있는가?"
+    if item.topic == "조직 운영·협업":
+        return "지금 일이 막히는 지점은 사람 수 문제인가, 결정·인수인계 방식 문제인가?"
+    return "이 사례의 판단 기준을 우리 다음 기획 리뷰에 그대로 대 보면 무엇이 달라지는가?"
+
+
+TOPIC_PROPOSALS = {
+    "AI 기반 제품·자동화": ("AI/자동화 후보 업무 목록화", "반복 업무를 처리량·오류율·소요시간 기준으로 정렬해 자동화 후보 1~2개를 고릅니다.", "처리시간, 수동 처리 건수, 오류율"),
+    "제품 발견·사용자 리서치": ("백로그 가설 표시", "백로그 항목마다 '검증된 문제 / 아직 가설' 표시를 붙이고 가설 항목은 고객 인터뷰 5건으로 먼저 확인합니다.", "가설 검증 비율, 재작업 건수"),
+    "제품 전략·로드맵": ("로드맵 항목에 목표 지표 달기", "이번 분기 로드맵 항목마다 바꾸려는 지표 한 개와 목표치를 적습니다.", "지표가 정해진 항목 비율"),
+    "제품 지표·실험·성장": ("출시 전 성공 기준 정하기", "새 기능 기획서에 성공 지표·측정 이벤트·판단 시점을 출시 전에 적습니다.", "사후 판단 가능 기능 비율"),
+    "UX·고객 경험": ("이탈 단계 점검", "핵심 플로우 단계별 이탈률을 뽑고 가장 큰 단계 하나를 다음 개선 대상으로 정합니다.", "단계별 이탈률"),
+    "조직 운영·협업": ("인수 조건 템플릿 정비", "주요 스토리에 정상/예외/운영자 케이스와 측정 이벤트를 포함합니다.", "재오픈 이슈 수, QA 결함 수"),
+    "서비스 및 제품 전략": ("기획안 1페이지 문제 정의", "신규 기획안 상단에 고객 문제·가설·성공 지표를 1페이지로 정리합니다.", "기획안 반려율, 리뷰 리드타임"),
+}
+
+
+def proposals_for(top: list[ContentItem], limit: int = 3) -> list[tuple[str, str, str, str]]:
+    """이번 주 고른 글의 주제에 맞춰 실무 적용 제안을 만든다(매주 같은 2줄이 나오지 않게)."""
+    out: list[tuple[str, str, str, str]] = []
+    for item in top:
+        p = TOPIC_PROPOSALS.get(item.topic)
+        if p and p[0] not in [x[0] for x in out]:
+            out.append((p[0], p[1], p[2], item.title))
+        if len(out) >= limit:
+            break
+    return out or [(*TOPIC_PROPOSALS["서비스 및 제품 전략"], "")]
+
+
+def key_points(item: ContentItem, limit: int = 2) -> list[str]:
+    """RSS 요약·본문 앞부분에서 핵심 문장 두 개."""
+    text = item.summary or item.excerpt or ""
+    text = re.sub(r"^(Listen now|Watch now)\s*(\([^)]*\))?\s*\|?\s*", "", text.strip(), flags=re.I)
+    text = re.sub(r"^[^\w]+", "", text)
+    parts = [x.strip() for x in re.split(r"(?<=[.!?。])\s+", text) if len(x.strip()) > 20]
+    return [textwrap.shorten(x, width=220, placeholder="...") for x in parts[:limit]] or ([textwrap.shorten(text, 220, placeholder="...")] if text else [])
+
+
+def full_report_url() -> str:
+    explicit = os.getenv("FULL_REPORT_URL", "").strip()
+    if explicit:
+        return explicit
+    server = os.getenv("GITHUB_SERVER_URL", "https://github.com").strip()
+    repo = os.getenv("GITHUB_REPOSITORY", "jellasi/planning_insight").strip()
+    return f"{server}/{repo}/blob/main/last_report.md"
+
+
+def slack_escape(text: str) -> str:
+    return str(text or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
 
@@ -370,7 +432,7 @@ def markdown_report(items: list[ContentItem], errors: list[str], config: dict[st
         f"- 주요 독자: {target}",
         f"- 관심 주제: {focus}",
         f"- 이전 리포트: {'있음' if previous_topics else '확인 필요'}",
-        f"- 상세 리포트 URL: {report_url()}",
+        f"- 실행 기록: {report_url()}",
         "",
         "## 1. Executive Summary",
     ]
@@ -391,7 +453,8 @@ def markdown_report(items: list[ContentItem], errors: list[str], config: dict[st
         lines += [
             f"### [{item.topic}]",
             f"- 중요도: {item.priority}",
-            f"- 핵심 내용: {item.title} — {item.summary or item.excerpt or '요약 확인 필요'}",
+            f"- 핵심 내용: {item.title}",
+            *[f"  - {kp}" for kp in key_points(item, limit=3)],
             f"- 등장 배경: {item.source}에 {item.published_at} 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: {'; '.join(related_titles(items, item.topic, limit=4))}. 이전 리포트 대비 구분: {status}.",
             f"- 실무적으로 중요한 이유: {implication_for(item)}",
             f"- 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계",
@@ -419,20 +482,12 @@ def markdown_report(items: list[ContentItem], errors: list[str], config: dict[st
         "",
         "## 4. 실무 적용 제안",
     ]
-    proposals = [
-        ("기획안 1페이지 문제 정의 추가", "해결책 중심 기획으로 인한 우선순위 혼선을 줄임", "모든 신규 기획안 상단에 고객 문제·가설·성공 지표를 1페이지로 정리", "기획 리뷰 속도와 의사결정 품질 향상", "Product, Design, Data", "기획안 반려율, 리뷰 리드타임"),
-        ("백로그 인수 조건 템플릿 정비", "개발 착수 후 해석 차이와 재작업을 줄임", "주요 스토리에 정상/예외/운영자 케이스와 측정 이벤트를 포함", "QA 누락과 운영 이슈 감소", "Product, Engineering, QA, Ops", "재오픈 이슈 수, QA 결함 수"),
-        ("AI/자동화 후보 업무 목록화", "AI 도입 논의를 기능 아이디어가 아닌 업무 병목 기준으로 전환", "반복 업무·처리량·오류율·소요시간 기준으로 후보를 정렬", "우선순위가 높은 자동화 과제 도출", "Product, Ops, Data, Engineering", "처리시간, 수동 처리 건수, 오류율"),
-    ]
-    for p in proposals[:3]:
+    for title, how, metric, from_title in proposals_for(top):
         lines += [
-            f"### {p[0]}",
-            f"- 적용 항목: {p[0]}",
-            f"- 해결하려는 문제: {p[1]}",
-            f"- 적용 방법: {p[2]}",
-            f"- 기대 효과: {p[3]}",
-            f"- 필요한 협업 조직: {p[4]}",
-            f"- 확인할 지표: {p[5]}",
+            f"### {title}",
+            f"- 적용 방법: {how}",
+            f"- 확인할 지표: {metric}",
+            f"- 계기가 된 글: {from_title or '해당 없음'}",
             "",
         ]
 
@@ -460,29 +515,53 @@ def markdown_report(items: list[ContentItem], errors: list[str], config: dict[st
     return "\n".join(lines).strip() + "\n"
 
 
+PRIORITY_ICON = {"HIGH": "🔥", "MEDIUM": "💡", "LOW": "📎"}
+PRIORITY_KO = {"HIGH": "높음", "MEDIUM": "보통", "LOW": "낮음"}
+
+
 def slack_message(items: list[ContentItem], date_from: str, date_to: str) -> str:
     period = f"{date_from}~{date_to}"
-    lines = [f"📌 **PM·PO 인사이트 | {period}**", "", "**이번 주 핵심**"]
-    top = unique_topic_items(items, limit=3)
-    if not top:
-        lines.append("- 이번 기간 입력 데이터 기준 유의미한 자료 없음")
-    for item in top:
-        icon = "💡 " if item.priority == "HIGH" else ""
-        summary = textwrap.shorten(item.title, width=80, placeholder="...")
-        implication = textwrap.shorten(implication_for(item), width=105, placeholder="...")
-        lines += [f"- {icon}**[{item.topic}]** {summary}", f"  → {implication}"]
-    lines += [
-        "",
-        "**실무 적용 제안**",
-        "- 신규 기획안에 고객 문제·가설·성공 지표를 1페이지로 먼저 정리",
-        "- 백로그 인수 조건에 정상/예외/운영 케이스와 측정 이벤트 포함",
-        "",
-        f"🔗 [전체 리포트 보기]({report_url()})",
+    top = unique_topic_items(items, limit=5)
+    sources = sorted({i.source for i in items})
+    lines = [
+        f"📌 *PM·PO 인사이트*  |  `{period}`",
+        f"이번 주 수집 {len(items)}건 · 출처 {len(sources)}곳 · 주제별 대표 {len(top)}건" + ("  _(나머지 글은 스레드 👇)_" if len(items) > len(top) else ""),
     ]
-    msg = "\n".join(lines)
-    if len(msg) > 1200:
-        msg = msg[:1140].rstrip() + f"\n\n🔗 [전체 리포트 보기]({report_url()})"
-    return msg
+    if not top:
+        lines += ["", "이번 기간 입력 데이터 기준 유의미한 자료 없음"]
+    for idx, item in enumerate(top, start=1):
+        icon = PRIORITY_ICON.get(item.priority, "📎")
+        title = slack_escape(textwrap.shorten(item.title.replace("|", "–"), width=110, placeholder="..."))
+        lines += [
+            "",
+            f"{icon} *{idx}. [{item.topic}]* <{item.url}|{title}>",
+            f"   {slack_escape(item.source)} · {item.published_at} · 중요도 {PRIORITY_KO.get(item.priority, item.priority)}",
+        ]
+        for kp in key_points(item, limit=2):
+            lines.append(f"   ▸ {slack_escape(kp)}")
+        lines.append(f"   → {slack_escape(implication_for(item))}")
+        lines.append(f"   ❓ {slack_escape(discussion_question(item))}")
+    proposals = proposals_for(top)
+    lines += ["", "*실무 적용 제안*"]
+    for title, how, metric, _ in proposals:
+        lines.append(f"• *{slack_escape(title)}* — {slack_escape(how)} _(지표: {slack_escape(metric)})_")
+    lines += ["", f"🔗 <{full_report_url()}|전체 리포트 보기>"]
+    return "\n".join(lines)
+
+
+def slack_thread_messages(items: list[ContentItem], errors: list[str]) -> list[str]:
+    top_urls = {i.url for i in unique_topic_items(items, limit=5)}
+    rest = [i for i in items if i.url not in top_urls]
+    out: list[str] = []
+    if rest:
+        lines = [f"📚 *그 밖에 이번 주 수집된 글 {len(rest)}건*"]
+        for item in rest[:20]:
+            title = slack_escape(textwrap.shorten(item.title.replace("|", "–"), width=100, placeholder="..."))
+            lines.append(f"• `{item.topic}` <{item.url}|{title}> — {slack_escape(item.source)} · {item.published_at}")
+        out.append("\n".join(lines))
+    if errors:
+        out.append("🛠️ *수집 오류*\n" + "\n".join(f"• {slack_escape(e)}" for e in errors))
+    return out
 
 
 def build_json_report(items: list[ContentItem], md: str, slack: str, date_from: str, date_to: str) -> dict[str, Any]:
@@ -509,7 +588,7 @@ def build_json_report(items: list[ContentItem], md: str, slack: str, date_from: 
     }
 
 
-def send_slack(text: str) -> None:
+def send_slack(text: str, thread: list[str] | None = None) -> None:
     bot_token = os.getenv("SLACK_BOT_TOKEN", "").strip()
     channel_id = os.getenv("SLACK_CHANNEL_ID", "").strip()
     webhook = os.getenv("SLACK_WEBHOOK_URL", "").strip()
@@ -522,6 +601,14 @@ def send_slack(text: str) -> None:
             if resp.status >= 300 or not data.get("ok"):
                 raise RuntimeError(f"Slack bot API failed: {data.get('error', resp.status)}")
         print("Slack bot notification sent")
+        for reply in (thread or []):
+            body_obj = {"channel": channel_id, "text": reply[:3800], "thread_ts": data.get("ts"), "unfurl_links": False, "unfurl_media": False}
+            r = Request("https://slack.com/api/chat.postMessage", data=json.dumps(body_obj).encode("utf-8"), headers={"Authorization": f"Bearer {bot_token}", "Content-Type": "application/json; charset=utf-8", "User-Agent": USER_AGENT}, method="POST")
+            with urlopen(r, timeout=20) as resp2:
+                d2 = json.loads(resp2.read().decode("utf-8", errors="replace"))
+                if not d2.get("ok"):
+                    raise RuntimeError(f"Slack thread reply failed: {d2.get('error')}")
+            time.sleep(1.1)
         return
     if webhook:
         payload = json.dumps({"text": text}).encode("utf-8")
@@ -575,6 +662,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--json-out", type=Path, default=DEFAULT_REPORT_JSON)
     parser.add_argument("--markdown-out", type=Path, default=DEFAULT_REPORT_MD)
     parser.add_argument("--slack-out", type=Path, default=DEFAULT_SLACK)
+    parser.add_argument("--slack-thread-out", type=Path, default=DEFAULT_SLACK_THREAD)
     args = parser.parse_args(argv)
 
     config = json.loads(args.config.read_text(encoding="utf-8"))
@@ -582,11 +670,13 @@ def main(argv: list[str] | None = None) -> int:
     items, errors = collect_items(config, args.period_from, args.period_to)
     md = markdown_report(items, errors, config, args.period_from, args.period_to, previous_topics)
     slack = slack_message(items, args.period_from, args.period_to)
+    thread = slack_thread_messages(items, errors)
     result = build_json_report(items, md, slack, args.period_from, args.period_to)
 
     args.json_out.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     args.markdown_out.write_text(md, encoding="utf-8")
     args.slack_out.write_text(slack + "\n", encoding="utf-8")
+    args.slack_thread_out.write_text(json.dumps(thread, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False, indent=2))
     print(f"Collected content: {len(items)}")
     if errors:
@@ -594,7 +684,7 @@ def main(argv: list[str] | None = None) -> int:
         for err in errors:
             print(f"- {err}")
     if args.notify:
-        send_slack(slack)
+        send_slack(slack, thread)
         send_email(result["report_title"], md)
     else:
         print("No notification sent")
