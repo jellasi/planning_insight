@@ -1,39 +1,51 @@
-# 2026-11-02 ~ 2026-11-08 서비스 기획·PM·PO 인사이트 리포트
+# 2026-11-09 ~ 2026-11-15 서비스 기획·PM·PO 인사이트 리포트
 
 ## 리포트 정보
-- 리포트 기간: 2026-11-02 ~ 2026-11-08
-- 작성 기준일: 2026-11-09
+- 리포트 기간: 2026-11-09 ~ 2026-11-15
+- 작성 기준일: 2026-11-16
 - 주요 독자: 서비스 기획자, Product Manager, Product Owner
 - 관심 주제: 서비스 및 제품 전략, 고객 문제 정의와 사용자 리서치, 신규 기능 및 정책 설계, 제품 발견과 가설 검증, 로드맵 및 우선순위 관리, 제품 지표와 데이터 분석, 실험, A/B 테스트 및 성장 전략, UX 및 고객 경험, 운영 프로세스와 어드민 설계, PM·PO 협업 및 조직 운영, AI 기반 제품 및 업무 자동화, 국내외 제품 사례
 - 이전 리포트: 있음
-- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/42550445546
+- 상세 리포트 URL: https://github.com/jellasi/planning_insight/actions/runs/43792765498
 
 ## 1. Executive Summary
-- AI 기반 제품·자동화: How Figma’s PMs actually use AI every day | Ezra Mechaber (PM, Figma); AI and the Future of the Product Role; 🎙️ How I AI: Grok vs. Dot vs. Muse vs. Duet + How Figma’s PMs actually use AI every day 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
-- 서비스 및 제품 전략: Lenny’s Newsletter holiday gift guide 2026 등을 통해 신규 관찰로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
+- AI 기반 제품·자동화: Meta’s Muse: How we launched the most successful consumer product this year | Mona Sarantakos; 🧠 Community Wisdom: When you become the bottleneck for your AI agents, the PULL framework for PMs, product growth vs. growth marketing, boosting feedback response rates, and more; 🎙️ How I AI: How this founder built a better Duolingo with Codex 등을 통해 지속 이슈로 확인되었습니다. AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
+- 서비스 및 제품 전략: How this founder built a better Duolingo with Codex | William Imoh 등을 통해 지속 이슈로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
+- 조직 운영·협업: EP112 Why Adding Engineers Slows You Down: Escaping the Ticket Factory with Thanos Diacakis and Jay Stansell 등을 통해 신규 관찰로 확인되었습니다. 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 
 ## 2. 주요 인사이트
 ### [AI 기반 제품·자동화]
 - 중요도: HIGH
-- 핵심 내용: How Figma’s PMs actually use AI every day | Ezra Mechaber (PM, Figma) — Listen now | 🎙️ Figma growth PM Ezra Mechaber demos PM OS, a 31-skill repo used by 60+ PMs, and AutoXP, an agent that runs growth experiments with one human checkpoint
-- 등장 배경: Lenny's Newsletter에 2026-11-02 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: How Figma’s PMs actually use AI every day | Ezra Mechaber (PM, Figma); AI and the Future of the Product Role; 🎙️ How I AI: Grok vs. Dot vs. Muse vs. Duet + How Figma’s PMs actually use AI every day; What AI Changes - All Things Product Podcast with Teresa Torres & Petra Wille. 이전 리포트 대비 구분: 지속.
+- 핵심 내용: Meta’s Muse: How we launched the most successful consumer product this year | Mona Sarantakos — Listen now | Mona Sarantakos on going from a weekend with OpenClaw to shipping the fastest-growing consumer AI product in history
+- 등장 배경: Lenny's Newsletter에 2026-11-15 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Meta’s Muse: How we launched the most successful consumer product this year | Mona Sarantakos; 🧠 Community Wisdom: When you become the bottleneck for your AI agents, the PULL framework for PMs, product growth vs. growth marketing, boosting feedback response rates, and more; 🎙️ How I AI: How this founder built a better Duolingo with Codex; State of the tech job market: late 2026. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: AI 기능을 단순 추가 기능이 아니라 업무 흐름·운영 효율·고객 접점 개선 관점에서 설계할 필요가 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
 - 팀에서 논의할 질문: 우리 서비스에서 AI가 실제로 줄여야 하는 사용자/운영자의 반복 업무는 무엇인가?
-- 출처: How Figma’s PMs actually use AI every day | Ezra Mechaber (PM, Figma), Lenny's Newsletter, https://www.lennysnewsletter.com/p/how-figmas-pms-actually-use-ai-every
-- 발행일: 2026-11-02
+- 출처: Meta’s Muse: How we launched the most successful consumer product this year | Mona Sarantakos, Lenny's Newsletter, https://www.lennysnewsletter.com/p/metas-muse-how-we-launched-the-most
+- 발행일: 2026-11-15
 
 ### [서비스 및 제품 전략]
 - 중요도: HIGH
-- 핵심 내용: Lenny’s Newsletter holiday gift guide 2026 — 100+ gift ideas—all things I actually use, love, and recommend
-- 등장 배경: Lenny's Newsletter에 2026-11-03 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: Lenny’s Newsletter holiday gift guide 2026. 이전 리포트 대비 구분: 신규.
+- 핵심 내용: How this founder built a better Duolingo with Codex | William Imoh — Watch now (39 mins) | 🎙️ Hackmamba founder William Imoh shows the native app he built with Codex to learn Norwegian, and the Lord of the Rings Grok bot fellowship that helps run his company
+- 등장 배경: Lenny's Newsletter에 2026-11-09 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: How this founder built a better Duolingo with Codex | William Imoh. 이전 리포트 대비 구분: 지속.
 - 실무적으로 중요한 이유: 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
 - 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
 - 적용 시 주의사항: 원문 사례의 산업·조직 규모가 우리 상황과 다를 수 있으므로 그대로 복제하지 말고 문제 정의와 지표를 먼저 맞춰야 합니다.
 - 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
-- 출처: Lenny’s Newsletter holiday gift guide 2026, Lenny's Newsletter, https://www.lennysnewsletter.com/p/lennys-newsletter-holiday-gift-guide-057
-- 발행일: 2026-11-03
+- 출처: How this founder built a better Duolingo with Codex | William Imoh, Lenny's Newsletter, https://www.lennysnewsletter.com/p/how-this-founder-built-a-better-duolingo
+- 발행일: 2026-11-09
+
+### [조직 운영·협업]
+- 중요도: LOW
+- 핵심 내용: EP112 Why Adding Engineers Slows You Down: Escaping the Ticket Factory with Thanos Diacakis and Jay Stansell — I wanted to understand why teams can add people and process, then ship less.
+- 등장 배경: Product Coalition에 2026-11-13 발행된 콘텐츠로 수집되었습니다. 관련 수집 자료: EP112 Why Adding Engineers Slows You Down: Escaping the Ticket Factory with Thanos Diacakis and Jay Stansell. 이전 리포트 대비 구분: 신규.
+- 실무적으로 중요한 이유: 팀 협업 방식, 의사결정 기준, 운영 프로세스 개선 논의의 참고 자료로 활용할 수 있습니다.
+- 적용 가능한 업무: 기획 리뷰, 백로그 정리, 로드맵 논의, 요구사항 작성, 실험/지표 설계
+- 적용 시 주의사항: 광고성·일반론 가능성이 있으므로 바로 적용하기보다 내부 맥락과 맞는지 확인이 필요합니다.
+- 팀에서 논의할 질문: 이 인사이트를 다음 스프린트 또는 기획 리뷰에서 어떻게 작게 검증할 수 있는가?
+- 출처: EP112 Why Adding Engineers Slows You Down: Escaping the Ticket Factory with Thanos Diacakis and Jay Stansell, Product Coalition, https://www.productcoalition.com/p/ep112-why-adding-engineers-slows
+- 발행일: 2026-11-13
 
 ## 3. 역할별 시사점
 
@@ -89,5 +101,6 @@
 - 단순 홍보성 콘텐츠와 실무 적용 가능한 사례를 계속 분리해 평가 필요
 
 ## 7. 출처
-- How Figma’s PMs actually use AI every day | Ezra Mechaber (PM, Figma), Lenny's Newsletter, 2026-11-02, https://www.lennysnewsletter.com/p/how-figmas-pms-actually-use-ai-every
-- Lenny’s Newsletter holiday gift guide 2026, Lenny's Newsletter, 2026-11-03, https://www.lennysnewsletter.com/p/lennys-newsletter-holiday-gift-guide-057
+- Meta’s Muse: How we launched the most successful consumer product this year | Mona Sarantakos, Lenny's Newsletter, 2026-11-15, https://www.lennysnewsletter.com/p/metas-muse-how-we-launched-the-most
+- How this founder built a better Duolingo with Codex | William Imoh, Lenny's Newsletter, 2026-11-09, https://www.lennysnewsletter.com/p/how-this-founder-built-a-better-duolingo
+- EP112 Why Adding Engineers Slows You Down: Escaping the Ticket Factory with Thanos Diacakis and Jay Stansell, Product Coalition, 2026-11-13, https://www.productcoalition.com/p/ep112-why-adding-engineers-slows
